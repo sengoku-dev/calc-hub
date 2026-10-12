@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ふるさと納税 控除上限額シミュレーター（2026年） | かんたんお金計算</title>
+<meta name="description" content="年収と家族構成を入れるだけで、ふるさと納税の自己負担2,000円で済む寄附上限額を概算。総務省の計算式（住民税所得割額×20%÷(90%−所得税率×1.021)＋2,000円）を2026年の控除額で実装。年収別早見表つき。">
+<link rel="canonical" href="https://sengoku-dev.github.io/calc-hub/furusato/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="ふるさと納税 控除上限額シミュレーター（2026年） | かんたんお金計算">
+<meta property="og:description" content="年収と家族構成を入れるだけで、ふるさと納税の自己負担2,000円で済む寄附上限額を概算。総務省の計算式（住民税所得割額×20%÷(90%−所得税率×1.021)＋2,000円）を2026年の控除額で実装。年収別早見表つき。">
+<meta property="og:url" content="https://sengoku-dev.github.io/calc-hub/furusato/">
+<meta property="og:site_name" content="かんたんお金計算">
+<meta property="og:locale" content="ja_JP">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="/calc-hub/assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/calc-hub/assets/style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"ふるさと納税 控除上限額シミュレーター（2026年）","url":"https://sengoku-dev.github.io/calc-hub/furusato/","applicationCategory":"UtilitiesApplication","operatingSystem":"Web","description":"年収と家族構成を入れるだけで、ふるさと納税の自己負担2,000円で済む寄附上限額を概算。総務省の計算式（住民税所得割額×20%÷(90%−所得税率×1.021)＋2,000円）を2026年の控除額で実装。年収別早見表つき。","offers":{"@type":"Offer","price":"0","priceCurrency":"JPY"},"inLanguage":"ja"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"上限額ギリギリまで寄附しても大丈夫ですか？","acceptedAnswer":{"@type":"Answer","text":"おすすめしません。本ツールの年収は見込みであり、年末の賞与や残業代で実際の年収がずれると上限も変わります。また生命保険料控除・医療費控除・iDeCo・住宅ローン控除などを使うと上限は下がります。上限の8〜9割を目安にし、12月に年収が固まってから残りを寄附するのが安全です。超過分は控除されず純粋な寄附になります（返礼品は受け取れます）。"}},{"@type":"Question","name":"共働きの場合は夫婦それぞれ計算するのですか？","acceptedAnswer":{"@type":"Answer","text":"はい。ふるさと納税の控除は寄附した本人の所得税・住民税から行われるので、夫婦それぞれの年収で上限を計算し、それぞれの名義で寄附します。配偶者を扶養していない（配偶者の年収が概ね136万円超で配偶者控除の対象外）なら「独身または共働き」を選んでください。配偶者特別控除の対象になる年収帯では、上限がわずかに下がります。"}},{"@type":"Question","name":"ワンストップ特例と確定申告で上限は変わりますか？","acceptedAnswer":{"@type":"Answer","text":"上限額は同じです。違うのは控除のされ方で、確定申告では所得税からの還付＋翌年の住民税の減額、ワンストップ特例では全額が翌年の住民税から減額されます。ワンストップ特例は寄附先が5自治体以内で、確定申告をしない給与所得者が使えます。医療費控除や住宅ローン控除の1年目で確定申告する人は、ふるさと納税も確定申告に含める必要があります（ワンストップの申請は無効になります）。"}},{"@type":"Question","name":"2026年・2027年に制度はどう変わりますか？","acceptedAnswer":{"@type":"Answer","text":"2025年10月から、ポータルサイトのポイント付与が禁止されました。2026年10月からは自治体の募集経費や地場産品基準がさらに厳格化されますが、控除上限の計算式は2026年の寄附分まで変わりません。2027年分の寄附（2028年度の住民税）からは、住民税の特例控除額に「所得割額の20%」に加えて「193万円」の上限が設けられ、年収が概ね1億円を超えるような高所得者の上限が頭打ちになります。"}},{"@type":"Question","name":"住宅ローン控除があると上限はどうなりますか？","acceptedAnswer":{"@type":"Answer","text":"確定申告で両方を使う場合、ふるさと納税の寄附金控除が先に所得税を減らし、その後に住宅ローン控除が引かれます。所得税で引ききれない住宅ローン控除は住民税から（上限あり）差し引かれるため、所得税の少ない人は住宅ローン控除の一部が使い切れず、結果的にふるさと納税が損になることがあります。ワンストップ特例を使えば所得税側の計算が発生しないため、この影響を避けられるケースが多いです。"}},{"@type":"Question","name":"年収が低いと上限がゼロになるのはなぜですか？","acceptedAnswer":{"@type":"Answer","text":"上限額は住民税所得割額の20%をもとに決まるため、住民税がかからない人（給与収入で概ね119万円以下）は上限がゼロ、つまり寄附しても控除がありません。年収200万円台でも上限は1〜2万円程度です。住民税が非課税の人がふるさと納税をすると、自己負担が2,000円では済まず全額が寄附になります。"}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"かんたんお金計算","item":"https://sengoku-dev.github.io/calc-hub/"},{"@type":"ListItem","position":2,"name":"ふるさと納税 控除上限額シミュレーター（2026年）","item":"https://sengoku-dev.github.io/calc-hub/furusato/"}]}</script>
+
+</head>
+<body>
+<header class="site-header"><div class="wrap"><a class="brand" href="/calc-hub/">かんたんお金計算</a><nav class="nav"><a href="/calc-hub/tedori/">手取り計算</a><a href="/calc-hub/jutaku-loan/">住宅ローン</a><a href="/calc-hub/furusato/">ふるさと納税</a><a href="/calc-hub/tsumitate/">積立シミュ</a><a href="/calc-hub/taishokukin/">退職金</a><a href="/calc-hub/shitsugyo-hoken/">失業保険</a><a href="/calc-hub/zangyo/">残業代</a><a href="/calc-hub/juminzei/">住民税</a></nav></div></header>
+<div class="ad-slot ad-top" data-ad="728x90" data-ad-mobile="320x50"></div>
+<main class="wrap">
+<p class="pr-label">当サイトはアフィリエイト広告（A8.net・楽天アフィリエイト）を利用しています。</p>
+
+<h1>ふるさと納税 控除上限額シミュレーター（2026年）</h1>
+<p class="lead">年収と家族構成を入れると、<strong>自己負担2,000円で済む寄附の上限額</strong>を総務省の計算式で概算します。2026年（令和8年分）の所得税・住民税の控除額で計算。年収別の早見表つき。</p>
+
+<div class="tool card" data-tool="furusato">
+<form>
+<div class="grid">
+<div class="field"><label for="f-income">年収（給与・額面）</label><div class="unit"><input id="f-income" name="income" type="number" inputmode="numeric" min="0" step="10" value="500"><span>万円</span></div><span class="hint">2026年1〜12月の見込み総支給額</span></div>
+<div class="field"><label for="f-hs">高校生の子（16〜18歳）</label><div class="unit"><input id="f-hs" name="hs" type="number" inputmode="numeric" min="0" max="10" value="0"><span>人</span></div><span class="hint">一般の扶養親族。中学生以下は数えません</span></div>
+<div class="field"><label for="f-univ">大学生の子（19〜22歳）</label><div class="unit"><input id="f-univ" name="univ" type="number" inputmode="numeric" min="0" max="10" value="0"><span>人</span></div><span class="hint">特定扶養親族（控除63万円）</span></div>
+</div>
+<fieldset class="field"><legend class="field"><strong>家族構成</strong></legend>
+<div class="radio-row"><label><input type="radio" name="family" value="single" checked>独身または共働き</label><label><input type="radio" name="family" value="spouse">配偶者を扶養（配偶者控除あり）</label></div></fieldset>
+<div class="actions"><button type="submit" class="btn btn-calc">上限額を計算する</button></div>
+</form>
+<div class="result is-empty" aria-live="polite"><div class="big">年収を入力すると上限額が表示されます</div><p class="note">JavaScriptが無効の場合は、下の早見表をご覧ください。</p></div>
+<p class="note">前提: 給与所得のみ、住宅ローン控除・医療費控除・iDeCo等なし、社会保険料は協会けんぽ東京・厚生年金・雇用保険の本人負担分（<a href="/calc-hub/tedori/">手取り計算</a>と同じ前提）。</p>
+</div>
+
+<div class="cta">
+<strong>関連ツール</strong>
+<ul>
+<li>税金と社会保険の内訳をまとめて確認 → <a href="/calc-hub/tedori/">年収から手取り計算</a></li>
+<li>節税した分を積み立てると？ → <a href="/calc-hub/tsumitate/">積立シミュレーター</a></li>
+<li>退職金を受け取る年の上限は → <a href="/calc-hub/taishokukin/">退職金の手取り計算</a>（退職所得は原則、上限計算に含まれません）</li>
+<li>離職した年は収入が減り上限も下がります → <a href="/calc-hub/shitsugyo-hoken/">失業保険の受給額シミュレーター</a>（基本手当は非課税）</li>
+<li>残業代で年収が増えると上限も上がります → <a href="/calc-hub/zangyo/">残業代計算・固定残業代チェッカー</a></li>
+<li>上限の元になる住民税所得割を詳しく → <a href="/calc-hub/juminzei/">住民税シミュレーター</a>（調整控除・非課税ラインつき）</li>
+</ul>
+</div>
+
+<h2>年収別 控除上限額の早見表</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>年収</th><th class="num">独身・共働き</th><th class="num">配偶者を扶養</th><th class="num">独身＋高校生1人</th><th class="num">配偶者扶養＋大学生1人</th></tr></thead>
+<tbody data-quick>
+<tr><td class="num">300万円</td><td class="num">28,000</td><td class="num">19,000</td><td class="num">19,000</td><td class="num">6,000</td></tr>
+<tr><td class="num">400万円</td><td class="num">42,000</td><td class="num">33,000</td><td class="num">33,000</td><td class="num">21,000</td></tr>
+<tr><td class="num">500万円</td><td class="num">58,000</td><td class="num">50,000</td><td class="num">50,000</td><td class="num">37,000</td></tr>
+<tr><td class="num">600万円</td><td class="num">77,000</td><td class="num">69,000</td><td class="num">69,000</td><td class="num">54,000</td></tr>
+<tr><td class="num">700万円</td><td class="num">108,000</td><td class="num">86,000</td><td class="num">86,000</td><td class="num">75,000</td></tr>
+<tr><td class="num">800万円</td><td class="num">130,000</td><td class="num">121,000</td><td class="num">121,000</td><td class="num">94,000</td></tr>
+<tr><td class="num">900万円</td><td class="num">156,000</td><td class="num">147,000</td><td class="num">147,000</td><td class="num">134,000</td></tr>
+<tr><td class="num">1,000万円</td><td class="num">183,000</td><td class="num">174,000</td><td class="num">174,000</td><td class="num">161,000</td></tr>
+<tr><td class="num">1,100万円</td><td class="num">220,000</td><td class="num">201,000</td><td class="num">201,000</td><td class="num">188,000</td></tr>
+<tr><td class="num">1,200万円</td><td class="num">249,000</td><td class="num">239,000</td><td class="num">239,000</td><td class="num">225,000</td></tr>
+<tr><td class="num">1,300万円</td><td class="num">277,000</td><td class="num">267,000</td><td class="num">267,000</td><td class="num">253,000</td></tr>
+<tr><td class="num">1,400万円</td><td class="num">361,000</td><td class="num">349,000</td><td class="num">349,000</td><td class="num">282,000</td></tr>
+<tr><td class="num">1,500万円</td><td class="num">394,000</td><td class="num">382,000</td><td class="num">382,000</td><td class="num">366,000</td></tr>
+</tbody></table></div>
+<p class="note">金額は円（1,000円未満切捨て）。総務省の早見表とは社会保険料の前提が異なるため数千円の差が出ることがあります。</p>
+
+<h2>ふるさと納税の「上限額」とは何か</h2>
+<p>ふるさと納税は、自治体への寄附額のうち2,000円を除いた全額が所得税と住民税から差し引かれる制度です。ただし無制限ではなく、住民税から差し引ける「特例控除額」に<strong>住民税所得割額の20%</strong>という天井があります。この天井に達する寄附額が「控除上限額」で、これを超えた分は控除されず、ただの寄附になります。</p>
+<p>控除は3段階に分かれています。</p>
+<ol>
+<li><strong>所得税の寄附金控除</strong>: （寄附額−2,000円）×所得税率×1.021 が還付（または年末調整後の税額から減額）。</li>
+<li><strong>住民税の基本控除</strong>: （寄附額−2,000円）×10%。</li>
+<li><strong>住民税の特例控除</strong>: （寄附額−2,000円）×（90%−所得税率×1.021）。ここに「所得割額の20%まで」の上限がある。</li>
+</ol>
+<p>1〜3を合計すると寄附額−2,000円になる、というのが「自己負担2,000円」の仕組みです。</p>
+
+<h2>上限額の計算式（総務省方式）</h2>
+<p>特例控除額が所得割額の20%に等しくなる寄附額を逆算すると、次の式になります。</p>
+<p><code>控除上限額 ＝ 住民税所得割額 × 20% ÷ (90% − 所得税率 × 1.021) ＋ 2,000円</code></p>
+<p>たとえば年収500万円・独身の場合、住民税所得割額は約23.8万円、所得税率は5%なので、238,100×0.2÷(0.9−0.05×1.021)＋2,000 ≒ 58,000円となります。所得税率が高い人ほど分母が小さくなり、同じ所得割額でも上限は大きくなります。</p>
+<p>本ツールでは、年収から給与所得控除・社会保険料控除・基礎控除・配偶者控除・扶養控除を差し引いて所得税の課税所得（税率の判定用）と住民税の課税所得を求め、住民税の所得割額は調整控除を引いた後の金額を使っています。</p>
+
+<h2>2026年の控除額で何が変わったか</h2>
+<p>令和7・8年度の税制改正で所得税の基礎控除が最大104万円に、給与所得控除の最低保障が74万円に引き上げられました。これにより<strong>所得税の税率区分が1段階下がる人</strong>が出ます（課税所得が195万円や330万円の境目付近の人）。税率が下がると上限額の計算式の分母が大きくなるため、上限額は少し減ります。一方、住民税の基礎控除は43万円で変わっていないので、所得割額そのものはほとんど変わりません。年収600万円前後の人は、昨年の感覚より上限が数千円下がっている可能性があるので、改めて計算し直すことをおすすめします。</p>
+
+<h2>上限を下げる要因・上げる要因</h2>
+<ul>
+<li><strong>下げる</strong>: iDeCo・生命保険料控除・地震保険料控除・医療費控除・小規模企業共済（いずれも課税所得を減らす）、住宅ローン控除（確定申告で併用する場合）、配偶者特別控除、扶養親族の増加。</li>
+<li><strong>上げる</strong>: 年収の増加、扶養親族の減少（子どもの独立など）、副業や不動産所得などの他の所得（総合課税分は所得割額を増やす）。</li>
+<li><strong>影響しない</strong>: 退職金（分離課税の退職所得は原則、上限計算に含まれません）、NISA口座の運用益（非課税）、特定口座・源泉徴収ありの株式譲渡益（申告しなければ含まれません）。</li>
+</ul>
+
+<h2>計算方法と根拠</h2>
+<ol>
+<li>給与所得 ＝ 年収 − 給与所得控除（令和8年分）。社会保険料は協会けんぽ東京・厚生年金・雇用保険の本人負担分を概算。</li>
+<li>所得税の課税所得 ＝ 給与所得 − 社会保険料 − 基礎控除（104万／67万／62万円）− 配偶者控除38万円 − 扶養控除（高校生38万円、大学生63万円）。ここから所得税率（5〜45%）を判定。</li>
+<li>住民税の課税所得 ＝ 給与所得 − 社会保険料 − 基礎控除43万円 − 配偶者控除33万円 − 扶養控除（高校生33万円、大学生45万円）。所得割額 ＝ 課税所得×10% − 調整控除。</li>
+<li>上限額 ＝ 所得割額×20%÷(90%−所得税率×1.021)＋2,000円（1,000円未満切捨て）。</li>
+</ol>
+<ul class="sources">
+<li><a href="https://www.soumu.go.jp/main_sosiki/jichi_zeisei/czaisei/czaisei_seido/furusato/mechanism/deduction.html" target="_blank" rel="noopener">総務省 ふるさと納税ポータルサイト 税金の控除について</a>（計算式・目安表）</li>
+<li><a href="https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/1155.htm" target="_blank" rel="noopener">国税庁 タックスアンサー No.1155 ふるさと納税（寄附金控除）</a></li>
+<li><a href="https://www.nta.go.jp/users/gensen/2026kiso/index.htm" target="_blank" rel="noopener">国税庁 令和8年度税制改正（基礎控除・給与所得控除の引上げ）</a></li>
+<li><a href="https://www.soumu.go.jp/main_sosiki/jichi_zeisei/czaisei/czaisei_seido/furusato/" target="_blank" rel="noopener">総務省 ふるさと納税の制度改正（ポイント付与の禁止・2026年10月の基準見直し）</a></li>
+</ul>
+<p class="note">本ツールの結果は概算であり、控除額を保証するものではありません。正確な上限は、お住まいの自治体の住民税課税資料や税理士にご確認ください。寄附先の選択や返礼品の内容は各自治体の案内をご確認ください。</p>
+<section class="faq" id="faq"><h2>よくある質問</h2><details><summary>上限額ギリギリまで寄附しても大丈夫ですか？</summary><p>おすすめしません。本ツールの年収は見込みであり、年末の賞与や残業代で実際の年収がずれると上限も変わります。また生命保険料控除・医療費控除・iDeCo・住宅ローン控除などを使うと上限は下がります。上限の8〜9割を目安にし、12月に年収が固まってから残りを寄附するのが安全です。超過分は控除されず純粋な寄附になります（返礼品は受け取れます）。</p></details><details><summary>共働きの場合は夫婦それぞれ計算するのですか？</summary><p>はい。ふるさと納税の控除は寄附した本人の所得税・住民税から行われるので、夫婦それぞれの年収で上限を計算し、それぞれの名義で寄附します。配偶者を扶養していない（配偶者の年収が概ね136万円超で配偶者控除の対象外）なら「独身または共働き」を選んでください。配偶者特別控除の対象になる年収帯では、上限がわずかに下がります。</p></details><details><summary>ワンストップ特例と確定申告で上限は変わりますか？</summary><p>上限額は同じです。違うのは控除のされ方で、確定申告では所得税からの還付＋翌年の住民税の減額、ワンストップ特例では全額が翌年の住民税から減額されます。ワンストップ特例は寄附先が5自治体以内で、確定申告をしない給与所得者が使えます。医療費控除や住宅ローン控除の1年目で確定申告する人は、ふるさと納税も確定申告に含める必要があります（ワンストップの申請は無効になります）。</p></details><details><summary>2026年・2027年に制度はどう変わりますか？</summary><p>2025年10月から、ポータルサイトのポイント付与が禁止されました。2026年10月からは自治体の募集経費や地場産品基準がさらに厳格化されますが、控除上限の計算式は2026年の寄附分まで変わりません。2027年分の寄附（2028年度の住民税）からは、住民税の特例控除額に「所得割額の20%」に加えて「193万円」の上限が設けられ、年収が概ね1億円を超えるような高所得者の上限が頭打ちになります。</p></details><details><summary>住宅ローン控除があると上限はどうなりますか？</summary><p>確定申告で両方を使う場合、ふるさと納税の寄附金控除が先に所得税を減らし、その後に住宅ローン控除が引かれます。所得税で引ききれない住宅ローン控除は住民税から（上限あり）差し引かれるため、所得税の少ない人は住宅ローン控除の一部が使い切れず、結果的にふるさと納税が損になることがあります。ワンストップ特例を使えば所得税側の計算が発生しないため、この影響を避けられるケースが多いです。</p></details><details><summary>年収が低いと上限がゼロになるのはなぜですか？</summary><p>上限額は住民税所得割額の20%をもとに決まるため、住民税がかからない人（給与収入で概ね119万円以下）は上限がゼロ、つまり寄附しても控除がありません。年収200万円台でも上限は1〜2万円程度です。住民税が非課税の人がふるさと納税をすると、自己負担が2,000円では済まず全額が寄附になります。</p></details></section>
+</main>
+<div class="ad-slot ad-bottom" data-ad="300x250" data-ad-mobile="300x250"></div>
+<footer class="site-footer"><div class="wrap">
+<p class="disclaimer">本サイトの計算結果は概算であり、正確性を保証するものではありません。実際の金額は各機関・制度の最新情報をご確認ください。本サイトはアフィリエイト広告（A8.net・楽天アフィリエイト等）を利用しています。</p>
+<p><a href="/calc-hub/about/">このサイトについて</a> · <a href="/calc-hub/privacy/">プライバシーポリシー</a> · 最終更新: 2026-10-11</p>
+<p>© 2026 かんたんお金計算</p>
+</div></footer>
+<script>window.ADS_ENABLED = false;</script>
+<script src="/calc-hub/assets/ads.js" defer></script>
+<script src="/calc-hub/assets/app.js" defer></script>
+</body>
+</html>

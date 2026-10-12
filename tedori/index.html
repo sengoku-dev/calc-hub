@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>年収から手取り計算（2026年版） | かんたんお金計算</title>
+<meta name="description" content="年収を入れるだけで2026年（令和8年分）の手取り額を概算。健康保険・厚生年金・雇用保険・子ども・子育て支援金・所得税・住民税の内訳と、年収300万〜1500万円の手取り早見表つき。基礎控除104万円など令和8年度税制改正を反映。">
+<link rel="canonical" href="https://sengoku-dev.github.io/calc-hub/tedori/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="年収から手取り計算（2026年版） | かんたんお金計算">
+<meta property="og:description" content="年収を入れるだけで2026年（令和8年分）の手取り額を概算。健康保険・厚生年金・雇用保険・子ども・子育て支援金・所得税・住民税の内訳と、年収300万〜1500万円の手取り早見表つき。基礎控除104万円など令和8年度税制改正を反映。">
+<meta property="og:url" content="https://sengoku-dev.github.io/calc-hub/tedori/">
+<meta property="og:site_name" content="かんたんお金計算">
+<meta property="og:locale" content="ja_JP">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="/calc-hub/assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/calc-hub/assets/style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"年収から手取り計算（2026年版）","url":"https://sengoku-dev.github.io/calc-hub/tedori/","applicationCategory":"UtilitiesApplication","operatingSystem":"Web","description":"年収を入れるだけで2026年（令和8年分）の手取り額を概算。健康保険・厚生年金・雇用保険・子ども・子育て支援金・所得税・住民税の内訳と、年収300万〜1500万円の手取り早見表つき。基礎控除104万円など令和8年度税制改正を反映。","offers":{"@type":"Offer","price":"0","priceCurrency":"JPY"},"inLanguage":"ja"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"手取りが「額面の8割」より少ないのはなぜですか？","acceptedAnswer":{"@type":"Answer","text":"年収が上がるほど所得税の税率（5%→10%→20%…）が上がり、社会保険料も標準報酬月額に比例して増えるためです。年収300万円では手取り率が約80%ですが、年収1,000万円では約73%、1,500万円では約68%まで下がります。厚生年金の保険料は標準報酬月額65万円（年収換算で約780万円）で頭打ちになるため、それ以上は所得税の伸びが手取り率低下の主因になります。"}},{"@type":"Question","name":"住民税はなぜ「翌年」にかかるのに今年の手取りから引いているのですか？","acceptedAnswer":{"@type":"Answer","text":"住民税は前年の所得をもとに翌年6月から天引きされます。本ツールは「この年収が続いた場合の年間の負担感」を示すため、同じ年収に対する住民税をその年の天引きとして概算しています。新卒1年目や退職した年など、前年と年収が大きく違う年は実際の天引き額とずれます。"}},{"@type":"Question","name":"「独身税」とは何ですか？この計算に入っていますか？","acceptedAnswer":{"@type":"Answer","text":"SNSなどで「独身税」と呼ばれているのは、2026年4月から始まった「子ども・子育て支援金」のことです。独身者だけが払う税金ではなく、医療保険の加入者全員（会社員は労使折半、扶養家族の分は不要）が健康保険料に上乗せして負担します。協会けんぽの令和8年度の支援金率は0.23%で、本ツールでは標準報酬月額×0.23%÷2を「子ども・子育て支援金」として別行で表示しています。"}},{"@type":"Question","name":"ボーナスがある場合はどう入力すればいいですか？","acceptedAnswer":{"@type":"Answer","text":"年収にボーナスを含めた総額を入力してください。本ツールは年収÷12を毎月の報酬として標準報酬月額を決めているため、賞与の比率が高い人（特に賞与が年150万円を超える人）は厚生年金の上限の扱いが実際と少し異なり、保険料がやや多めに出ることがあります。"}},{"@type":"Question","name":"扶養人数には誰を数えればいいですか？","acceptedAnswer":{"@type":"Answer","text":"所得税の扶養控除（38万円）の対象になる16歳以上の扶養親族の人数です。配偶者控除（38万円）を受ける配偶者も控除額が同じなので1人として数えて構いません。19〜22歳の特定扶養親族（控除63万円）や70歳以上の老人扶養親族は控除額が大きいため、本ツールでは少し税金が多めに（手取りが少なめに）出ます。16歳未満の子どもは所得税の扶養控除の対象外なので数えません。"}},{"@type":"Question","name":"計算結果はどのくらい正確ですか？","acceptedAnswer":{"@type":"Answer","text":"令和8年分の所得税の速算表・基礎控除・給与所得控除、協会けんぽ東京支部の令和8年度料率、雇用保険の令和8年度料率を用いた概算です。健康保険組合に加入している人、東京都以外の協会けんぽ、生命保険料控除・iDeCo・住宅ローン控除がある人などは実際と異なります。給与明細や源泉徴収票の確認、個別の税務相談は税理士にご相談ください。"}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"かんたんお金計算","item":"https://sengoku-dev.github.io/calc-hub/"},{"@type":"ListItem","position":2,"name":"年収から手取り計算（2026年版）","item":"https://sengoku-dev.github.io/calc-hub/tedori/"}]}</script>
+
+</head>
+<body>
+<header class="site-header"><div class="wrap"><a class="brand" href="/calc-hub/">かんたんお金計算</a><nav class="nav"><a href="/calc-hub/tedori/">手取り計算</a><a href="/calc-hub/jutaku-loan/">住宅ローン</a><a href="/calc-hub/furusato/">ふるさと納税</a><a href="/calc-hub/tsumitate/">積立シミュ</a><a href="/calc-hub/taishokukin/">退職金</a><a href="/calc-hub/shitsugyo-hoken/">失業保険</a><a href="/calc-hub/zangyo/">残業代</a><a href="/calc-hub/juminzei/">住民税</a></nav></div></header>
+<div class="ad-slot ad-top" data-ad="728x90" data-ad-mobile="320x50"></div>
+<main class="wrap">
+<p class="pr-label">当サイトはアフィリエイト広告（A8.net・楽天アフィリエイト）を利用しています。</p>
+
+<h1>年収から手取り計算（2026年版）</h1>
+<p class="lead">年収・年齢・扶養人数を入れるだけで、2026年（令和8年分）の税率・保険料率で<strong>年間と月あたりの手取り額</strong>を概算します。健康保険・厚生年金・雇用保険・子ども・子育て支援金・所得税・住民税の内訳つき。会社員（給与所得者・協会けんぽ東京支部加入）を想定しています。</p>
+
+<div class="tool card" data-tool="tedori">
+<form>
+<div class="grid">
+<div class="field"><label for="t-income">年収（額面・ボーナス込み）</label><div class="unit"><input id="t-income" name="income" type="number" inputmode="numeric" min="0" step="10" value="500"><span>万円</span></div><span class="hint">源泉徴収票の「支払金額」にあたる総支給額</span></div>
+<div class="field"><label for="t-age">年齢</label><div class="unit"><input id="t-age" name="age" type="number" inputmode="numeric" min="15" max="75" value="30"><span>歳</span></div><span class="hint">40〜64歳は介護保険料が加わります</span></div>
+<div class="field"><label for="t-dep">扶養人数（16歳以上）</label><div class="unit"><input id="t-dep" name="dependents" type="number" inputmode="numeric" min="0" max="10" value="0"><span>人</span></div><span class="hint">配偶者控除を受ける配偶者も1人と数えてOK</span></div>
+</div>
+<div class="actions"><button type="submit" class="btn btn-calc">手取りを計算する</button></div>
+</form>
+<div class="result is-empty" aria-live="polite"><div class="big">年収を入力すると手取りが表示されます</div><p class="note">JavaScriptが無効の場合は、下の早見表をご覧ください。</p></div>
+<p class="note">前提: 協会けんぽ東京支部（令和8年度 健康保険9.85%・介護1.62%・子ども・子育て支援金0.23%）、厚生年金18.3%、雇用保険0.5%、令和8年分の所得税（基礎控除104万円等）、住民税10%＋均等割5,000円。各種保険料は労使折半後の本人負担分です。</p>
+</div>
+
+<div class="cta">
+<strong>手取りがわかったら次は…</strong>
+<ul>
+<li>家計から住宅ローンをいくら組めるか → <a href="/calc-hub/jutaku-loan/">住宅ローン返済シミュレーター</a></li>
+<li>この年収でいくらまで寄附できる？ → <a href="/calc-hub/furusato/">ふるさと納税の控除上限額</a></li>
+<li>手取りの何割を積み立てると将来いくらになる？ → <a href="/calc-hub/tsumitate/">積立シミュレーター</a></li>
+<li>退職・転職の間の収入は → <a href="/calc-hub/shitsugyo-hoken/">失業保険の受給額シミュレーター</a></li>
+<li>年収に含まれる残業代は適正？ → <a href="/calc-hub/zangyo/">残業代計算・固定残業代チェッカー</a></li>
+<li>住民税だけを詳しく・非課税ラインも判定 → <a href="/calc-hub/juminzei/">住民税シミュレーター</a>（2027年度分）</li>
+</ul>
+</div>
+
+<h2>年収別 手取り早見表（300万〜1,500万円）</h2>
+<p class="note" data-quick-caption>条件: 30歳・扶養0人（JSが有効なら上の入力に連動して再計算します）</p>
+<div class="table-wrap"><table>
+<thead><tr><th>年収</th><th class="num">社会保険料</th><th class="num">所得税</th><th class="num">住民税</th><th class="num">手取り（年）</th><th class="num">手取り（月）</th><th class="num">手取り率</th></tr></thead>
+<tbody data-quick>
+<tr><td class="num">300万円</td><td class="num">457,728</td><td class="num">26,600</td><td class="num">115,700</td><td class="num">2,399,972</td><td class="num">199,998</td><td class="num">80.0%</td></tr>
+<tr><td class="num">400万円</td><td class="num">598,952</td><td class="num">57,200</td><td class="num">175,600</td><td class="num">3,168,248</td><td class="num">264,021</td><td class="num">79.2%</td></tr>
+<tr><td class="num">500万円</td><td class="num">723,136</td><td class="num">91,600</td><td class="num">243,100</td><td class="num">3,942,164</td><td class="num">328,514</td><td class="num">78.8%</td></tr>
+<tr><td class="num">600万円</td><td class="num">881,400</td><td class="num">149,300</td><td class="num">307,300</td><td class="num">4,662,000</td><td class="num">388,500</td><td class="num">77.7%</td></tr>
+<tr><td class="num">700万円</td><td class="num">1,039,640</td><td class="num">276,100</td><td class="num">375,500</td><td class="num">5,308,760</td><td class="num">442,397</td><td class="num">75.8%</td></tr>
+<tr><td class="num">800万円</td><td class="num">1,164,964</td><td class="num">434,400</td><td class="num">453,000</td><td class="num">5,947,636</td><td class="num">495,636</td><td class="num">74.3%</td></tr>
+<tr><td class="num">900万円</td><td class="num">1,212,288</td><td class="num">628,800</td><td class="num">543,200</td><td class="num">6,615,712</td><td class="num">551,309</td><td class="num">73.5%</td></tr>
+<tr><td class="num">1,000万円</td><td class="num">1,265,672</td><td class="num">822,200</td><td class="num">637,900</td><td class="num">7,274,228</td><td class="num">606,186</td><td class="num">72.7%</td></tr>
+<tr><td class="num">1,100万円</td><td class="num">1,331,152</td><td class="num">1,017,400</td><td class="num">731,300</td><td class="num">7,920,148</td><td class="num">660,012</td><td class="num">72.0%</td></tr>
+<tr><td class="num">1,200万円</td><td class="num">1,366,404</td><td class="num">1,244,000</td><td class="num">827,800</td><td class="num">8,561,796</td><td class="num">713,483</td><td class="num">71.3%</td></tr>
+<tr><td class="num">1,300万円</td><td class="num">1,437,920</td><td class="num">1,462,200</td><td class="num">920,700</td><td class="num">9,179,180</td><td class="num">764,932</td><td class="num">70.6%</td></tr>
+<tr><td class="num">1,400万円</td><td class="num">1,479,208</td><td class="num">1,784,100</td><td class="num">1,016,500</td><td class="num">9,720,192</td><td class="num">810,016</td><td class="num">69.4%</td></tr>
+<tr><td class="num">1,500万円</td><td class="num">1,556,784</td><td class="num">2,095,100</td><td class="num">1,108,800</td><td class="num">10,239,316</td><td class="num">853,276</td><td class="num">68.3%</td></tr>
+</tbody></table></div>
+<p class="note">金額は円。所得税は復興特別所得税込み、住民税は均等割5,000円込み。</p>
+
+<h2>手取りはどう決まる？ 天引きされる6つのお金</h2>
+<p>額面の年収から引かれるのは、大きく分けて「社会保険料」と「税金」の2種類です。社会保険料は給与の額（標準報酬月額）に料率を掛けて決まり、税金はそこからさらに各種控除を引いた「課税所得」に対してかかります。つまり<strong>社会保険料を払うほど税金は少し減る</strong>（社会保険料控除）という関係になっています。</p>
+<h3>1. 健康保険料（本人負担 4.925%）</h3>
+<p>協会けんぽの料率は都道府県ごとに違い、東京都の令和8年度（2026年3月分〜）は9.85%です。会社と折半するので本人負担は4.925%。給与そのものではなく、月給を50段階の「標準報酬月額」（5.8万〜139万円）に当てはめて計算します。</p>
+<h3>2. 子ども・子育て支援金（本人負担 0.115%）<span class="badge">2026年4月〜</span></h3>
+<p>2026年4月分から健康保険料に上乗せして徴収が始まった新しい負担です。「独身税」という呼び名で検索されることが多いのですが、正式名称は「子ども・子育て支援金」で、独身かどうかに関係なく医療保険の加入者全員が対象です。令和8年度の支援金率は全国一律0.23%（労使折半）で、賞与にもかかります。年収500万円なら本人負担は年5,000〜6,000円程度。率は今後段階的に引き上げられる予定です。</p>
+<h3>3. 介護保険料（40〜64歳のみ、本人負担 0.81%）</h3>
+<p>40歳の誕生日の前日が属する月から、健康保険料と一緒に徴収されます。令和8年度の料率は全国一律1.62%（折半後0.81%）。40歳になると手取りが月1,000〜3,000円ほど減るのはこれが理由です。</p>
+<h3>4. 厚生年金保険料（本人負担 9.15%）</h3>
+<p>料率は2017年9月以降18.3%で固定されています。標準報酬月額の上限は65万円（月給換算）なので、年収がおよそ780万円を超えると保険料は頭打ちになります。なお2025年の年金制度改正により、上限は2027年9月から段階的に75万円へ引き上げられる予定です（2026年時点では65万円）。</p>
+<h3>5. 雇用保険料（本人負担 0.5%）</h3>
+<p>令和8年度（2026年4月〜2027年3月）の一般の事業の労働者負担は0.5%で、2年連続の引き下げです。社会保険料の中では唯一、標準報酬ではなく実際の給与総額に対してかかります。</p>
+<h3>6. 所得税と住民税</h3>
+<p>年収から「給与所得控除」を引き、さらに社会保険料控除・基礎控除・扶養控除などを引いた金額が課税所得です。所得税は5%〜45%の累進税率（＋復興特別所得税2.1%）、住民税は一律10%の所得割＋均等割5,000円（森林環境税1,000円を含む）です。</p>
+
+<h2>2026年（令和8年分）の変更点</h2>
+<p>令和7年度・令和8年度の2度の税制改正で、いわゆる「年収の壁」が大きく動きました。本ツールは<strong>令和8年分の所得税</strong>に適用される次の数値を使っています（検証日: 2026年10月11日）。</p>
+<ul>
+<li><strong>基礎控除</strong>: 本則62万円に時限の特例加算が上乗せされ、合計所得金額489万円以下は104万円、489万円超655万円以下は67万円、655万円超2,350万円以下は62万円（令和8・9年分）。</li>
+<li><strong>給与所得控除</strong>: 最低保障額が74万円に（給与収入220万円以下。本則69万円＋令和8・9年分の特例5万円）。220万円超の計算式は従来どおりです。</li>
+<li>これにより所得税がかからない年収は<strong>178万円</strong>まで広がりました（104万＋74万）。</li>
+<li><strong>住民税</strong>の基礎控除は43万円で据え置き。給与所得控除の最低保障74万円は令和9年度分の住民税から適用されます。</li>
+<li>所得税の税率表（5〜45%）、住民税10%、均等割5,000円は変更ありません。</li>
+</ul>
+<p class="note">所得税の引き上げ分は毎月の源泉徴収には反映されず、2026年12月の年末調整でまとめて精算される運用です。そのため年の途中の給与明細では、本ツールより所得税が多めに引かれているのが普通です。</p>
+
+<h2>手取りを増やすために効く控除</h2>
+<p>税率が20%の人なら、控除が10万円増えると所得税2万円＋住民税1万円の計3万円ほど手取りが増えます。給与所得者が使いやすいものを挙げます。</p>
+<ul>
+<li><strong>iDeCo（個人型確定拠出年金）</strong>: 掛金の全額が小規模企業共済等掛金控除に。会社員は月2万円（企業年金なしなら月2.3万円）まで。60歳まで引き出せない点は要注意。</li>
+<li><strong>ふるさと納税</strong>: 手取りは増えませんが、上限額までなら自己負担2,000円で返礼品がもらえます。上限は<a href="/calc-hub/furusato/">ふるさと納税 控除上限額シミュレーター</a>で確認できます。</li>
+<li><strong>生命保険料控除・地震保険料控除</strong>: 最大で所得税12万円・住民税7万円。令和8・9年分は23歳未満の扶養親族がいる場合、一般生命保険料の控除枠が広がる特例があります。</li>
+<li><strong>住宅ローン控除</strong>: 年末残高の0.7%を所得税（引ききれなければ住民税の一部）から直接差し引く税額控除で、効果が最も大きい制度のひとつ。返済額は<a href="/calc-hub/jutaku-loan/">住宅ローン返済シミュレーター</a>で試算できます。</li>
+<li><strong>医療費控除・セルフメディケーション税制</strong>: 年10万円（所得200万円未満は所得の5%）を超えた医療費が対象。確定申告が必要です。</li>
+</ul>
+<p>一方で、社会保険料は控除で減らせません。社会保険料を下げる正攻法は、4〜6月の残業を抑えて標準報酬月額を下げることくらいですが、将来の年金額も減るため損得は一概に言えません。</p>
+
+<h2>計算方法と根拠</h2>
+<ol>
+<li>標準報酬月額 ＝ 年収÷12 を協会けんぽの等級表（1〜50級）に当てはめる。厚生年金は8.8万〜65万円の範囲。</li>
+<li>健康保険料 ＝ 標準報酬月額×9.85%÷2、支援金 ＝ ×0.23%÷2、介護保険料（40〜64歳） ＝ ×1.62%÷2、厚生年金 ＝ ×18.3%÷2（それぞれ月額、50銭以下切捨て）×12か月。雇用保険料 ＝ 年収×0.5%。</li>
+<li>給与所得 ＝ 年収 − 給与所得控除（220万円以下は74万円、〜360万円は30%＋8万円、〜660万円は20%＋44万円、〜850万円は10%＋110万円、850万円超は195万円）。</li>
+<li>所得税の課税所得 ＝ 給与所得 − 社会保険料 − 基礎控除（104万／67万／62万円）− 扶養控除38万円×人数（1,000円未満切捨て）。速算表で税額を求め、×1.021（復興特別所得税）、100円未満切捨て。</li>
+<li>住民税 ＝（給与所得 − 社会保険料 − 基礎控除43万円 − 扶養控除33万円×人数）×10% − 調整控除 ＋ 均等割5,000円。合計所得45万円以下（扶養ありは35万円×（扶養＋1）＋31万円以下）は非課税。</li>
+<li>手取り ＝ 年収 − 社会保険料 − 所得税 − 住民税。</li>
+</ol>
+<ul class="sources">
+<li><a href="https://www.kyoukaikenpo.or.jp/about/business/insurance_rate/rate_prefectures/r08" target="_blank" rel="noopener">協会けんぽ 令和8年度 都道府県単位保険料率</a>（東京 9.85%、介護 1.62%、支援金 0.23%）</li>
+<li><a href="https://www.nenkin.go.jp/service/kounen/hokenryo/ryogaku/ryogakuhyo/" target="_blank" rel="noopener">日本年金機構 厚生年金保険料額表</a>（18.3%、標準報酬月額上限65万円）</li>
+<li><a href="https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000108634.html" target="_blank" rel="noopener">厚生労働省 雇用保険料率について</a>（令和8年度 一般の事業 労働者負担 0.5%）</li>
+<li><a href="https://www.nta.go.jp/users/gensen/2026kiso/index.htm" target="_blank" rel="noopener">国税庁 令和8年度税制改正による所得税の基礎控除の引上げ等について</a></li>
+<li><a href="https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/1410.htm" target="_blank" rel="noopener">国税庁 タックスアンサー No.1410 給与所得控除</a> ／ <a href="https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/2260.htm" target="_blank" rel="noopener">No.2260 所得税の税率</a> ／ <a href="https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/1180.htm" target="_blank" rel="noopener">No.1180 扶養控除</a></li>
+<li><a href="https://www.soumu.go.jp/main_sosiki/jichi_zeisei/czaisei/czaisei_seido/150790_06.html" target="_blank" rel="noopener">総務省 個人住民税</a>（所得割10%・均等割） ／ <a href="https://www.cfa.go.jp/policies/kodomo-kosodate-shienkin" target="_blank" rel="noopener">こども家庭庁 子ども・子育て支援金制度</a></li>
+</ul>
+<p class="note">本ツールの結果は概算であり、税額や保険料の正確性を保証するものではありません。実際の金額は給与明細・源泉徴収票・住民税決定通知書でご確認ください。個別の税務相談は税理士にご相談ください。</p>
+<section class="faq" id="faq"><h2>よくある質問</h2><details><summary>手取りが「額面の8割」より少ないのはなぜですか？</summary><p>年収が上がるほど所得税の税率（5%→10%→20%…）が上がり、社会保険料も標準報酬月額に比例して増えるためです。年収300万円では手取り率が約80%ですが、年収1,000万円では約73%、1,500万円では約68%まで下がります。厚生年金の保険料は標準報酬月額65万円（年収換算で約780万円）で頭打ちになるため、それ以上は所得税の伸びが手取り率低下の主因になります。</p></details><details><summary>住民税はなぜ「翌年」にかかるのに今年の手取りから引いているのですか？</summary><p>住民税は前年の所得をもとに翌年6月から天引きされます。本ツールは「この年収が続いた場合の年間の負担感」を示すため、同じ年収に対する住民税をその年の天引きとして概算しています。新卒1年目や退職した年など、前年と年収が大きく違う年は実際の天引き額とずれます。</p></details><details><summary>「独身税」とは何ですか？この計算に入っていますか？</summary><p>SNSなどで「独身税」と呼ばれているのは、2026年4月から始まった「子ども・子育て支援金」のことです。独身者だけが払う税金ではなく、医療保険の加入者全員（会社員は労使折半、扶養家族の分は不要）が健康保険料に上乗せして負担します。協会けんぽの令和8年度の支援金率は0.23%で、本ツールでは標準報酬月額×0.23%÷2を「子ども・子育て支援金」として別行で表示しています。</p></details><details><summary>ボーナスがある場合はどう入力すればいいですか？</summary><p>年収にボーナスを含めた総額を入力してください。本ツールは年収÷12を毎月の報酬として標準報酬月額を決めているため、賞与の比率が高い人（特に賞与が年150万円を超える人）は厚生年金の上限の扱いが実際と少し異なり、保険料がやや多めに出ることがあります。</p></details><details><summary>扶養人数には誰を数えればいいですか？</summary><p>所得税の扶養控除（38万円）の対象になる16歳以上の扶養親族の人数です。配偶者控除（38万円）を受ける配偶者も控除額が同じなので1人として数えて構いません。19〜22歳の特定扶養親族（控除63万円）や70歳以上の老人扶養親族は控除額が大きいため、本ツールでは少し税金が多めに（手取りが少なめに）出ます。16歳未満の子どもは所得税の扶養控除の対象外なので数えません。</p></details><details><summary>計算結果はどのくらい正確ですか？</summary><p>令和8年分の所得税の速算表・基礎控除・給与所得控除、協会けんぽ東京支部の令和8年度料率、雇用保険の令和8年度料率を用いた概算です。健康保険組合に加入している人、東京都以外の協会けんぽ、生命保険料控除・iDeCo・住宅ローン控除がある人などは実際と異なります。給与明細や源泉徴収票の確認、個別の税務相談は税理士にご相談ください。</p></details></section>
+</main>
+<div class="ad-slot ad-bottom" data-ad="300x250" data-ad-mobile="300x250"></div>
+<footer class="site-footer"><div class="wrap">
+<p class="disclaimer">本サイトの計算結果は概算であり、正確性を保証するものではありません。実際の金額は各機関・制度の最新情報をご確認ください。本サイトはアフィリエイト広告（A8.net・楽天アフィリエイト等）を利用しています。</p>
+<p><a href="/calc-hub/about/">このサイトについて</a> · <a href="/calc-hub/privacy/">プライバシーポリシー</a> · 最終更新: 2026-10-11</p>
+<p>© 2026 かんたんお金計算</p>
+</div></footer>
+<script>window.ADS_ENABLED = false;</script>
+<script src="/calc-hub/assets/ads.js" defer></script>
+<script src="/calc-hub/assets/app.js" defer></script>
+</body>
+</html>

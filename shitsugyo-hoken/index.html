@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>失業保険の受給額シミュレーター（基本手当日額・給付日数 2026年版） | かんたんお金計算</title>
+<meta name="description" content="離職前の月給・年齢・被保険者期間・離職理由を入れるだけで、失業保険（雇用保険の基本手当）の日額・所定給付日数・受給総額の目安を計算。令和8年8月1日改定の賃金日額上限・基本手当日額上限（29歳以下7,450円〜45〜59歳9,110円）、給付制限1か月に対応。月給別の日額早見表と給付日数表つき。">
+<link rel="canonical" href="https://sengoku-dev.github.io/calc-hub/shitsugyo-hoken/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="失業保険の受給額シミュレーター（基本手当日額・給付日数 2026年版） | かんたんお金計算">
+<meta property="og:description" content="離職前の月給・年齢・被保険者期間・離職理由を入れるだけで、失業保険（雇用保険の基本手当）の日額・所定給付日数・受給総額の目安を計算。令和8年8月1日改定の賃金日額上限・基本手当日額上限（29歳以下7,450円〜45〜59歳9,110円）、給付制限1か月に対応。月給別の日額早見表と給付日数表つき。">
+<meta property="og:url" content="https://sengoku-dev.github.io/calc-hub/shitsugyo-hoken/">
+<meta property="og:site_name" content="かんたんお金計算">
+<meta property="og:locale" content="ja_JP">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="/calc-hub/assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/calc-hub/assets/style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"失業保険の受給額シミュレーター（基本手当日額・給付日数 2026年版）","url":"https://sengoku-dev.github.io/calc-hub/shitsugyo-hoken/","applicationCategory":"UtilitiesApplication","operatingSystem":"Web","description":"離職前の月給・年齢・被保険者期間・離職理由を入れるだけで、失業保険（雇用保険の基本手当）の日額・所定給付日数・受給総額の目安を計算。令和8年8月1日改定の賃金日額上限・基本手当日額上限（29歳以下7,450円〜45〜59歳9,110円）、給付制限1か月に対応。月給別の日額早見表と給付日数表つき。","offers":{"@type":"Offer","price":"0","priceCurrency":"JPY"},"inLanguage":"ja"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"失業保険はいくらもらえますか？目安を教えてください。","acceptedAnswer":{"@type":"Answer","text":"基本手当日額は「離職前6か月の賃金（賞与除く）÷180」で求めた賃金日額の50〜80%（60〜64歳は45〜80%）で、賃金が低いほど率が高くなります。月給30万円・30〜44歳なら日額は約6,307円、月給20万円なら約5,036円です。年齢区分ごとに上限があり、令和8年8月1日以降は29歳以下7,450円、30〜44歳8,270円、45〜59歳9,110円、60〜64歳7,830円です。受給総額は日額×所定給付日数（90〜330日）で、自己都合・被保険者期間10年未満なら90日分です。"}},{"@type":"Question","name":"自己都合退職だといつから振り込まれますか？","acceptedAnswer":{"@type":"Answer","text":"ハローワークで受給資格の決定を受けた日から7日間の待期期間があり、正当な理由のない自己都合退職の場合はさらに給付制限期間がつきます。2025年（令和7年）4月1日以降に離職した方は給付制限が原則1か月（従来は2か月）に短縮されました。ただし5年間に3回以上自己都合で離職した場合は3か月です。初回の振込は申請から2〜3か月後になることが多く、以後は4週間（28日）ごとの失業認定日の後に、認定された日数分（最大28日分）が振り込まれます。"}},{"@type":"Question","name":"会社都合（特定受給資格者）と自己都合でどれくらい差がありますか？","acceptedAnswer":{"@type":"Answer","text":"差は主に3つです。(1)給付日数: 45歳・被保険者期間20年以上なら特定受給資格者は330日、自己都合は150日。(2)給付制限: 特定受給資格者は待期7日のみで給付制限なし。(3)受給資格: 特定受給資格者は離職前1年間に被保険者期間6か月以上で足り、自己都合は離職前2年間に12か月以上が必要です。日額の計算式は同じです。倒産・解雇・雇い止め・ハラスメントや長時間労働による離職などが特定受給資格者・特定理由離職者に該当し得ますが、判定はハローワークが離職票の記載と事実関係から行います。"}},{"@type":"Question","name":"賃金日額に残業代やボーナスは含みますか？","acceptedAnswer":{"@type":"Answer","text":"離職前6か月間に「毎月決まって支払われた賃金」の合計を180で割ります。基本給のほか残業手当・通勤手当・住宅手当などの各種手当は含み、賞与（3か月を超える期間ごとに支払われるもの）や退職金は含みません。月によって残業代が違う場合は6か月の合計で平均されるので、本ツールには6か月分の総支給額を6で割った平均月給を入れてください。"}},{"@type":"Question","name":"受給中にアルバイトをしたら減額されますか？","acceptedAnswer":{"@type":"Answer","text":"待期期間中の就労は待期が延びます。待期後は、1日4時間未満の就労は「内職・手伝い」として収入額に応じて基本手当が減額または不支給（その日の分は後ろにずれる）になり、4時間以上働いた日は「就職・就労」として基本手当が支給されません（その日数分は受給期間内であれば先送りされます）。いずれも失業認定申告書への正確な申告が必要で、申告漏れは不正受給として返還・3倍の納付命令の対象になります。"}},{"@type":"Question","name":"65歳以上で退職した場合も同じ計算ですか？","acceptedAnswer":{"@type":"Answer","text":"65歳以上で離職した場合は基本手当ではなく「高年齢求職者給付金」という一時金になります。日額の計算式は29歳以下と同じ（上限7,450円）で、被保険者期間1年未満なら30日分、1年以上なら50日分が1回で支給されます。待期7日はありますが給付制限はなく、老齢年金と併給できます。本ツールで65歳以上を入力すると自動的にこの計算に切り替わります。"}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"かんたんお金計算","item":"https://sengoku-dev.github.io/calc-hub/"},{"@type":"ListItem","position":2,"name":"失業保険の受給額シミュレーター（基本手当日額・給付日数 2026年版）","item":"https://sengoku-dev.github.io/calc-hub/shitsugyo-hoken/"}]}</script>
+
+</head>
+<body>
+<header class="site-header"><div class="wrap"><a class="brand" href="/calc-hub/">かんたんお金計算</a><nav class="nav"><a href="/calc-hub/tedori/">手取り計算</a><a href="/calc-hub/jutaku-loan/">住宅ローン</a><a href="/calc-hub/furusato/">ふるさと納税</a><a href="/calc-hub/tsumitate/">積立シミュ</a><a href="/calc-hub/taishokukin/">退職金</a><a href="/calc-hub/shitsugyo-hoken/">失業保険</a><a href="/calc-hub/zangyo/">残業代</a><a href="/calc-hub/juminzei/">住民税</a></nav></div></header>
+<div class="ad-slot ad-top" data-ad="728x90" data-ad-mobile="320x50"></div>
+<main class="wrap">
+<p class="pr-label">当サイトはアフィリエイト広告（A8.net・楽天アフィリエイト）を利用しています。</p>
+
+<h1>失業保険の受給額シミュレーター（2026年版）</h1>
+<p class="lead">離職前の月給・年齢・雇用保険の被保険者期間・離職理由を入れると、<strong>失業保険（雇用保険の基本手当）の日額・所定給付日数・受給総額の目安</strong>を計算します。令和8年8月1日改定の賃金日額の上限・基本手当日額の上限と、2025年4月からの給付制限1か月に対応。月給別の日額早見表と給付日数表つき。</p>
+
+<div class="tool card" data-tool="shitsugyo">
+<form>
+<div class="grid">
+<div class="field"><label for="s-salary">離職前6か月の平均月給（額面・賞与除く）</label><div class="unit"><input id="s-salary" name="salary" type="number" inputmode="decimal" min="0" step="1" value="30"><span>万円</span></div><span class="hint">残業・通勤・住宅手当などは含む。6か月分の総支給額÷6</span></div>
+<div class="field"><label for="s-age">離職時の年齢</label><div class="unit"><input id="s-age" name="age" type="number" inputmode="numeric" min="15" max="80" value="35"><span>歳</span></div><span class="hint">日額の上限と給付日数の区分が変わります</span></div>
+<div class="field"><label for="s-years">雇用保険の被保険者期間</label><div class="unit"><input id="s-years" name="years" type="number" inputmode="decimal" min="0" max="50" step="0.5" value="8"><span>年</span></div><span class="hint">転職しても1年以内に再加入し受給していなければ通算</span></div>
+</div>
+<fieldset class="field"><legend>離職理由</legend>
+<div class="radio-row"><label><input type="radio" name="reason" value="ippan" checked>自己都合・定年など（一般の受給資格者）</label><label><input type="radio" name="reason" value="tokutei">倒産・解雇・雇い止めなど（特定受給資格者・特定理由離職者）</label><label><input type="radio" name="reason" value="konnan">就職困難者（障害者手帳をお持ちの方など）</label></div></fieldset>
+<div class="actions"><button type="submit" class="btn btn-calc">受給額を計算する</button></div>
+</form>
+<div class="result is-empty" aria-live="polite"><div class="big">月給を入力すると日額と総額が表示されます</div><p class="note">JavaScriptが無効の場合は、下の早見表をご覧ください。</p></div>
+<p class="note">前提: 令和8年8月1日〜令和9年7月31日に受給資格決定を受ける場合の賃金日額・基本手当日額の上下限。所定給付日数は離職日時点の年齢と算定基礎期間で判定。延長給付・個別延長給付・訓練延長給付、再就職手当などは含みません。</p>
+</div>
+
+<div class="cta">
+<strong>失業中・転職後のお金もあわせて確認</strong>
+<ul>
+<li>退職金を受け取るなら → <a href="/calc-hub/taishokukin/">退職金の手取り計算</a>（退職所得控除と税額）</li>
+<li>再就職先の年収からいくら残る？ → <a href="/calc-hub/tedori/">年収から手取り計算</a></li>
+<li>離職した翌年の住民税・ふるさと納税の上限 → <a href="/calc-hub/furusato/">ふるさと納税 控除上限額</a>（前年の所得がベース）</li>
+<li>生活防衛資金を積み立て直す → <a href="/calc-hub/tsumitate/">積立シミュレーター</a>／住宅ローンの返済見直し → <a href="/calc-hub/jutaku-loan/">住宅ローン返済シミュレーター</a></li>
+<li>離職前6か月の賃金には残業代も含まれます → <a href="/calc-hub/zangyo/">残業代計算・固定残業代チェッカー</a></li>
+<li>離職の翌年も払う前年所得の住民税は → <a href="/calc-hub/juminzei/">住民税シミュレーター</a>（6月〜の月額・普通徴収の各期）</li>
+</ul>
+</div>
+
+<h2>月給別 基本手当日額の早見表（令和8年8月1日〜）</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>平均月給</th><th class="num">賃金日額</th><th class="num">29歳以下</th><th class="num">30〜44歳</th><th class="num">45〜59歳</th><th class="num">60〜64歳</th></tr></thead>
+<tbody data-quick>
+<tr><td class="num">15万円</td><td class="num">5,000</td><td class="num">4,000</td><td class="num">4,000</td><td class="num">4,000</td><td class="num">4,000</td></tr>
+<tr><td class="num">20万円</td><td class="num">6,666</td><td class="num">5,036</td><td class="num">5,036</td><td class="num">5,036</td><td class="num">4,916</td></tr>
+<tr><td class="num">25万円</td><td class="num">8,333</td><td class="num">5,775</td><td class="num">5,775</td><td class="num">5,775</td><td class="num">5,264</td></tr>
+<tr><td class="num">30万円</td><td class="num">10,000</td><td class="num">6,307</td><td class="num">6,307</td><td class="num">6,307</td><td class="num">5,348</td></tr>
+<tr><td class="num">35万円</td><td class="num">11,666</td><td class="num">6,629</td><td class="num">6,629</td><td class="num">6,629</td><td class="num">5,431</td></tr>
+<tr><td class="num">40万円</td><td class="num">13,333</td><td class="num">6,744</td><td class="num">6,744</td><td class="num">6,744</td><td class="num">5,999</td></tr>
+<tr><td class="num">45万円</td><td class="num">15,000</td><td class="num">7,450</td><td class="num">7,500</td><td class="num">7,500</td><td class="num">6,750</td></tr>
+<tr><td class="num">50万円</td><td class="num">16,666</td><td class="num">7,450</td><td class="num">8,270</td><td class="num">8,333</td><td class="num">7,499</td></tr>
+<tr><td class="num">60万円</td><td class="num">20,000</td><td class="num">7,450</td><td class="num">8,270</td><td class="num">9,110</td><td class="num">7,830</td></tr>
+</tbody></table></div>
+<p class="note">金額は円（1日あたり）。賃金日額＝平均月給×6÷180。月給45万円以上は年齢区分の上限額に達します。65歳以上は29歳以下の列と同じ日額です。</p>
+
+<h2>所定給付日数の早見表</h2>
+<h3>倒産・解雇など（特定受給資格者・一部の特定理由離職者）</h3>
+<div class="table-wrap"><table>
+<thead><tr><th>離職時の年齢</th><th class="num">1年未満</th><th class="num">1年以上5年未満</th><th class="num">5年以上10年未満</th><th class="num">10年以上20年未満</th><th class="num">20年以上</th></tr></thead>
+<tbody>
+<tr><td>30歳未満</td><td class="num">90日</td><td class="num">90日</td><td class="num">120日</td><td class="num">180日</td><td class="num">—</td></tr>
+<tr><td>30〜34歳</td><td class="num">90日</td><td class="num">120日</td><td class="num">180日</td><td class="num">210日</td><td class="num">240日</td></tr>
+<tr><td>35〜44歳</td><td class="num">90日</td><td class="num">150日</td><td class="num">180日</td><td class="num">240日</td><td class="num">270日</td></tr>
+<tr><td>45〜59歳</td><td class="num">90日</td><td class="num">180日</td><td class="num">240日</td><td class="num">270日</td><td class="num">330日</td></tr>
+<tr><td>60〜64歳</td><td class="num">90日</td><td class="num">150日</td><td class="num">180日</td><td class="num">210日</td><td class="num">240日</td></tr>
+</tbody></table></div>
+<h3>自己都合・定年など（一般の受給資格者）／就職困難者</h3>
+<div class="table-wrap"><table>
+<thead><tr><th>区分</th><th class="num">1年未満</th><th class="num">1年以上10年未満</th><th class="num">10年以上20年未満</th><th class="num">20年以上</th></tr></thead>
+<tbody>
+<tr><td>一般の受給資格者（全年齢）</td><td class="num">—</td><td class="num">90日</td><td class="num">120日</td><td class="num">150日</td></tr>
+<tr><td>就職困難者 45歳未満</td><td class="num">150日</td><td class="num" colspan="3">300日</td></tr>
+<tr><td>就職困難者 45〜64歳</td><td class="num">150日</td><td class="num" colspan="3">360日</td></tr>
+</tbody></table></div>
+<p class="note">列は雇用保険の被保険者であった期間（算定基礎期間）。一般の受給資格者は離職前2年間に被保険者期間12か月以上が必要なため、1年未満は原則対象外。65歳以上は高年齢求職者給付金（1年未満30日分・1年以上50日分の一時金）。</p>
+
+<h2>失業保険の受給額は「日額×日数」で決まる</h2>
+<h3>ステップ1: 賃金日額を求める</h3>
+<p><code>賃金日額 ＝ 離職前6か月に支払われた賃金の合計（賞与を除く）÷ 180</code></p>
+<p>基本給だけでなく残業手当・通勤手当・各種手当を含めた総支給額（税や保険料を引く前）で計算します。月給30万円が6か月続いていれば、180万円÷180＝1万円が賃金日額です。賃金日額には年齢区分ごとの上限（29歳以下14,900円、30〜44歳16,540円、45〜59歳18,220円、60〜64歳17,400円）と全年齢共通の下限（3,203円）があり、これを超える・下回る部分は切り捨て・切り上げられます。</p>
+<h3>ステップ2: 給付率をかけて基本手当日額を求める</h3>
+<p>賃金日額が5,480円未満なら80%、5,480円以上13,490円以下では80%から50%へ賃金日額に応じて滑らかに下がり、13,490円を超えると50%（60〜64歳は12,120円を境に45%）です。具体的な式は厚生労働省が毎年8月に告示しており、30〜44歳の中間区間は <code>y ＝ 0.8w − 0.3 ×｛(w − 5,480) ÷ (13,490 − 5,480)｝× w</code>（1円未満切捨て）です。賃金日額1万円なら 8,000 − 0.3×0.5643×10,000 ＝ 6,307円。賃金が低い人ほど給付率が高く設計されているため、月給20万円なら約75%、月給40万円なら約51%になります。</p>
+<h3>ステップ3: 所定給付日数をかける</h3>
+<p>所定給付日数は離職理由・離職時の年齢・被保険者期間で90〜330日（就職困難者は最長360日）に決まります。自己都合退職の場合は年齢に関係なく被保険者期間10年未満で90日、10〜20年で120日、20年以上で150日。倒産・解雇などの特定受給資格者は年齢が高く勤続が長いほど多く、45〜59歳・20年以上なら330日です。月給30万円・35歳・勤続8年の自己都合退職なら 6,307円×90日 ＝ 約56.8万円が受給総額の目安です。</p>
+
+<h2>2025〜2026年の改正ポイント</h2>
+<ol>
+<li><strong>給付制限が原則1か月に短縮（2025年4月1日以降の離職）</strong>。正当な理由のない自己都合退職の給付制限は従来2か月でしたが、1か月になりました。5年間に3回以上の自己都合離職では3か月、重責解雇も3か月です。</li>
+<li><strong>教育訓練を受けると給付制限が解除</strong>。2025年4月以降に離職日前1年以内または離職後に教育訓練給付の対象講座や公共職業訓練などを受けると、自己都合でも待期7日の後すぐに基本手当を受け取れます。ハローワークへの申し出が必要です。</li>
+<li><strong>令和8年8月1日から日額の上限・下限を引き上げ</strong>。令和7年度の平均給与額が約2.7%上昇したことを受け、基本手当日額の上限は29歳以下7,255円→7,450円、30〜44歳8,055円→8,270円、45〜59歳8,870円→9,110円、60〜64歳7,623円→7,830円に、下限は2,411円→2,562円になりました。本ツールはこの改定後の値で計算しています。</li>
+</ol>
+
+<h2>受け取るまでの流れと注意点</h2>
+<p>退職後、会社から離職票（通常10日〜2週間程度）が届いたら、住所地のハローワークで求職の申込みと受給資格の決定を受けます。その日から7日間が待期期間で、自己都合ならさらに原則1か月の給付制限があります。以後は4週間ごとの失業認定日に求職活動の実績（原則2回以上）を申告し、認定された日数分が数日後に振り込まれます。受給期間は離職日の翌日から原則1年間なので、申請が遅れると所定給付日数を使い切れないことがあります。所定給付日数の3分の1以上を残して早期に安定した職に就くと「再就職手当」（残日数の60%または70%相当）が一時金で受け取れるため、受給総額をすべて受け取ってから就職するより有利になる場合があります。病気・けが・妊娠・出産・育児で30日以上働けないときは受給期間の延長（最長3年）を申請できます。</p>
+
+<h2>計算方法と根拠（検証日: 2026年10月11日）</h2>
+<ul>
+<li>賃金日額 ＝ 離職前6か月の賃金（賞与除く）÷180。上限: 29歳以下14,900円／30〜44歳16,540円／45〜59歳18,220円／60〜64歳17,400円、下限3,203円（令和8年8月1日〜）。</li>
+<li>基本手当日額 ＝ 厚生労働省告示の計算式（80%／逓減区間／50%または45%／上限額）で算出、1円未満切捨て。上限: 7,450／8,270／9,110／7,830円、下限2,562円。60〜64歳の逓減区間は2つの式のうち低い額。65歳以上は29歳以下の式を適用。</li>
+<li>所定給付日数 ＝ 雇用保険法第22条・第23条の表（特定受給資格者、一般の受給資格者、就職困難者）。特定理由離職者のうち雇い止め等（範囲1）は2027年3月31日までの離職について特定受給資格者と同じ日数。</li>
+<li>受給資格 ＝ 一般は離職前2年間に被保険者期間12か月以上、特定受給資格者・特定理由離職者は離職前1年間に6か月以上。待期7日、自己都合の給付制限は原則1か月（2025年4月1日以降の離職）。</li>
+<li>受給総額 ＝ 基本手当日額×所定給付日数。1回の支給額 ＝ 日額×28日。</li>
+</ul>
+<ul class="sources">
+<li><a href="https://www.mhlw.go.jp/stf/newpage_74837.html" target="_blank" rel="noopener">厚生労働省 雇用保険の基本手当日額の変更（令和8年8月1日から）</a></li>
+<li><a href="https://www.mhlw.go.jp/content/001726936.pdf" target="_blank" rel="noopener">厚生労働省 基本手当日額の計算式及び金額（令和8年8月1日〜）PDF</a></li>
+<li><a href="https://www.hellowork.mhlw.go.jp/insurance/insurance_benefitdays.html" target="_blank" rel="noopener">ハローワークインターネットサービス 基本手当の所定給付日数</a></li>
+<li><a href="https://www.hellowork.mhlw.go.jp/insurance/insurance_basicbenefit.html" target="_blank" rel="noopener">ハローワークインターネットサービス 基本手当について（受給要件・受給期間・日額）</a></li>
+<li><a href="https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000160564_00045.html" target="_blank" rel="noopener">厚生労働省 令和7年4月以降に教育訓練等を受ける場合の給付制限の解除</a></li>
+<li><a href="https://jsite.mhlw.go.jp/iwate-roudoukyoku/content/contents/002176733.pdf" target="_blank" rel="noopener">岩手労働局 令和7年4月1日以降の離職者の給付制限期間が1か月に短縮（リーフレット）</a></li>
+</ul>
+<p class="note">本ツールの結果は概算であり、支給額を保証するものではありません。賃金日額の算定（被保険者期間の数え方、日給・時給制の最低保障、休業中の賃金など）、離職理由の判定、延長給付の有無は個別の事情で変わります。実際の受給額・手続きは住所地のハローワークへ、会社との離職理由の争いや手続きの代行は社会保険労務士・弁護士にご相談ください。</p>
+<section class="faq" id="faq"><h2>よくある質問</h2><details><summary>失業保険はいくらもらえますか？目安を教えてください。</summary><p>基本手当日額は「離職前6か月の賃金（賞与除く）÷180」で求めた賃金日額の50〜80%（60〜64歳は45〜80%）で、賃金が低いほど率が高くなります。月給30万円・30〜44歳なら日額は約6,307円、月給20万円なら約5,036円です。年齢区分ごとに上限があり、令和8年8月1日以降は29歳以下7,450円、30〜44歳8,270円、45〜59歳9,110円、60〜64歳7,830円です。受給総額は日額×所定給付日数（90〜330日）で、自己都合・被保険者期間10年未満なら90日分です。</p></details><details><summary>自己都合退職だといつから振り込まれますか？</summary><p>ハローワークで受給資格の決定を受けた日から7日間の待期期間があり、正当な理由のない自己都合退職の場合はさらに給付制限期間がつきます。2025年（令和7年）4月1日以降に離職した方は給付制限が原則1か月（従来は2か月）に短縮されました。ただし5年間に3回以上自己都合で離職した場合は3か月です。初回の振込は申請から2〜3か月後になることが多く、以後は4週間（28日）ごとの失業認定日の後に、認定された日数分（最大28日分）が振り込まれます。</p></details><details><summary>会社都合（特定受給資格者）と自己都合でどれくらい差がありますか？</summary><p>差は主に3つです。(1)給付日数: 45歳・被保険者期間20年以上なら特定受給資格者は330日、自己都合は150日。(2)給付制限: 特定受給資格者は待期7日のみで給付制限なし。(3)受給資格: 特定受給資格者は離職前1年間に被保険者期間6か月以上で足り、自己都合は離職前2年間に12か月以上が必要です。日額の計算式は同じです。倒産・解雇・雇い止め・ハラスメントや長時間労働による離職などが特定受給資格者・特定理由離職者に該当し得ますが、判定はハローワークが離職票の記載と事実関係から行います。</p></details><details><summary>賃金日額に残業代やボーナスは含みますか？</summary><p>離職前6か月間に「毎月決まって支払われた賃金」の合計を180で割ります。基本給のほか残業手当・通勤手当・住宅手当などの各種手当は含み、賞与（3か月を超える期間ごとに支払われるもの）や退職金は含みません。月によって残業代が違う場合は6か月の合計で平均されるので、本ツールには6か月分の総支給額を6で割った平均月給を入れてください。</p></details><details><summary>受給中にアルバイトをしたら減額されますか？</summary><p>待期期間中の就労は待期が延びます。待期後は、1日4時間未満の就労は「内職・手伝い」として収入額に応じて基本手当が減額または不支給（その日の分は後ろにずれる）になり、4時間以上働いた日は「就職・就労」として基本手当が支給されません（その日数分は受給期間内であれば先送りされます）。いずれも失業認定申告書への正確な申告が必要で、申告漏れは不正受給として返還・3倍の納付命令の対象になります。</p></details><details><summary>65歳以上で退職した場合も同じ計算ですか？</summary><p>65歳以上で離職した場合は基本手当ではなく「高年齢求職者給付金」という一時金になります。日額の計算式は29歳以下と同じ（上限7,450円）で、被保険者期間1年未満なら30日分、1年以上なら50日分が1回で支給されます。待期7日はありますが給付制限はなく、老齢年金と併給できます。本ツールで65歳以上を入力すると自動的にこの計算に切り替わります。</p></details></section>
+</main>
+<div class="ad-slot ad-bottom" data-ad="300x250" data-ad-mobile="300x250"></div>
+<footer class="site-footer"><div class="wrap">
+<p class="disclaimer">本サイトの計算結果は概算であり、正確性を保証するものではありません。実際の金額は各機関・制度の最新情報をご確認ください。本サイトはアフィリエイト広告（A8.net・楽天アフィリエイト等）を利用しています。</p>
+<p><a href="/calc-hub/about/">このサイトについて</a> · <a href="/calc-hub/privacy/">プライバシーポリシー</a> · 最終更新: 2026-10-11</p>
+<p>© 2026 かんたんお金計算</p>
+</div></footer>
+<script>window.ADS_ENABLED = false;</script>
+<script src="/calc-hub/assets/ads.js" defer></script>
+<script src="/calc-hub/assets/app.js" defer></script>
+</body>
+</html>
