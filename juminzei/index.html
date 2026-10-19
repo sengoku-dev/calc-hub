@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>住民税シミュレーター（2027年度分・令和8年の年収で計算） | かんたんお金計算</title>
+<meta name="description" content="年収と家族構成を入れるだけで住民税（所得割・均等割・森林環境税）の年額と毎月の天引き額を概算。令和8年度税制改正（給与所得控除の最低保障74万円）を反映し、非課税ライン（単身119万円など）の判定、調整控除、市区町村6%・道府県4%の内訳、年収別早見表つき。">
+<link rel="canonical" href="https://sengoku-dev.github.io/calc-hub/juminzei/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="住民税シミュレーター（2027年度分・令和8年の年収で計算） | かんたんお金計算">
+<meta property="og:description" content="年収と家族構成を入れるだけで住民税（所得割・均等割・森林環境税）の年額と毎月の天引き額を概算。令和8年度税制改正（給与所得控除の最低保障74万円）を反映し、非課税ライン（単身119万円など）の判定、調整控除、市区町村6%・道府県4%の内訳、年収別早見表つき。">
+<meta property="og:url" content="https://sengoku-dev.github.io/calc-hub/juminzei/">
+<meta property="og:site_name" content="かんたんお金計算">
+<meta property="og:locale" content="ja_JP">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="/calc-hub/assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/calc-hub/assets/style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"住民税シミュレーター（2027年度分・令和8年の年収で計算）","url":"https://sengoku-dev.github.io/calc-hub/juminzei/","applicationCategory":"UtilitiesApplication","operatingSystem":"Web","description":"年収と家族構成を入れるだけで住民税（所得割・均等割・森林環境税）の年額と毎月の天引き額を概算。令和8年度税制改正（給与所得控除の最低保障74万円）を反映し、非課税ライン（単身119万円など）の判定、調整控除、市区町村6%・道府県4%の内訳、年収別早見表つき。","offers":{"@type":"Offer","price":"0","priceCurrency":"JPY"},"inLanguage":"ja"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"住民税はいくらかかりますか？計算方法は？","acceptedAnswer":{"@type":"Answer","text":"住民税（所得割）＝（給与所得 − 所得控除）× 10% − 調整控除、これに均等割4,000円と森林環境税1,000円を足したものが年額です。給与所得は年収から給与所得控除を引いた額、所得控除は社会保険料・基礎控除43万円・配偶者控除33万円・扶養控除33万円（19〜22歳は45万円）などです。例えば独身・年収500万円・社会保険料約72万円なら、課税所得は約240万円、所得割は約23.8万円、合計で年約24.3万円（月約2万円）が目安です。"}},{"@type":"Question","name":"住民税がかからない年収はいくらですか？","acceptedAnswer":{"@type":"Answer","text":"2026年（令和8年）の給与収入に対する2027年度分の住民税は、単身なら年収119万円以下で非課税になります（東京23区・政令市などの1級地）。給与所得控除の最低保障額が74万円に引き上げられたため、前年度の110万円から9万円上がりました。配偶者を扶養していれば175万円、配偶者と子1人なら210万円が目安です。地方の市町村（2級地・3級地）では限度額が少し低く、単身で115.5万円・112万円です。なお所得税がかからない年収（178万円）とは基準が異なります。"}},{"@type":"Question","name":"住民税はいつから、いつの所得に対してかかりますか？","acceptedAnswer":{"@type":"Answer","text":"住民税は前年1〜12月の所得に対して課税され、6月から翌年5月までの12回に分けて給与から天引き（特別徴収）されます。2026年の年収に対する住民税は、2027年6月から2028年5月の給与で払うことになります。新卒1年目は前年の所得がないため住民税が引かれず、2年目の6月から引かれ始めて手取りが減るのはこのためです。退職して給与天引きできなくなった場合は、自宅に届く納付書で年4回に分けて払う普通徴収に切り替わります。"}},{"@type":"Question","name":"均等割と所得割の違いは何ですか？","acceptedAnswer":{"@type":"Answer","text":"所得割は所得に比例してかかる部分で、税率は一律10%（市区町村民税6%＋道府県民税4%、政令指定都市は8%＋2%）です。均等割は所得にかかわらず一定額を負担する部分で、標準は市区町村3,000円＋道府県1,000円です。2024年度からはこれと一緒に国税の森林環境税1,000円が徴収されるため、合計5,000円になります。一部の県や市は独自の森林・環境税などを上乗せしており、均等割が数百円高い地域もあります。"}},{"@type":"Question","name":"ふるさと納税やiDeCo、医療費控除をすると住民税はどれくらい減りますか？","acceptedAnswer":{"@type":"Answer","text":"iDeCoの掛金・生命保険料控除・医療費控除などの所得控除は、控除額の10%だけ所得割が減ります。例えばiDeCoで年24万円を拠出すると、住民税は約2.4万円減ります（所得税も別に減ります）。ふるさと納税は税額控除なので仕組みが違い、上限額の範囲内なら寄附額から2,000円を引いた額のほとんどが翌年度の住民税と所得税から差し引かれます。本ツールでは所得控除を「その他の所得控除」欄に入れると反映できます。ふるさと納税の上限は別のツールで確認してください。"}},{"@type":"Question","name":"計算結果はどのくらい正確ですか？","acceptedAnswer":{"@type":"Answer","text":"給与収入のみの会社員を想定した概算です。社会保険料は協会けんぽ東京支部の令和8年度料率で自動計算しますが、給与明細や源泉徴収票の社会保険料を入力するとより正確になります。住宅ローン控除・配当控除・寄附金税額控除（ふるさと納税）・障害者控除・ひとり親控除の金額、配偶者特別控除、老人扶養親族の控除額の違い、自治体独自の超過課税には対応していません。正確な税額は、毎年5〜6月に届く住民税決定通知書や市区町村の窓口でご確認ください。個別の税務相談は税理士へどうぞ。"}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"かんたんお金計算","item":"https://sengoku-dev.github.io/calc-hub/"},{"@type":"ListItem","position":2,"name":"住民税シミュレーター（2027年度分・令和8年の年収で計算）","item":"https://sengoku-dev.github.io/calc-hub/juminzei/"}]}</script>
+
+</head>
+<body>
+<header class="site-header"><div class="wrap"><a class="brand" href="/calc-hub/">かんたんお金計算</a><nav class="nav"><a href="/calc-hub/tedori/">手取り計算</a><a href="/calc-hub/jutaku-loan/">住宅ローン</a><a href="/calc-hub/furusato/">ふるさと納税</a><a href="/calc-hub/tsumitate/">積立シミュ</a><a href="/calc-hub/taishokukin/">退職金</a><a href="/calc-hub/shitsugyo-hoken/">失業保険</a><a href="/calc-hub/zangyo/">残業代</a><a href="/calc-hub/juminzei/">住民税</a><a href="/calc-hub/nenshu-no-kabe/">年収の壁</a></nav></div></header>
+<div class="ad-slot ad-top" data-ad="728x90" data-ad-mobile="320x50"></div>
+<main class="wrap">
+<p class="pr-label">当サイトはアフィリエイト広告（A8.net・楽天アフィリエイト）を利用しています。</p>
+
+<h1>住民税シミュレーター（2027年度分・2026年の年収で計算）</h1>
+<p class="lead">年収と家族構成を入れると、<strong>住民税の年額と毎月の天引き額</strong>を概算します。所得割（市区町村6%・道府県4%）、調整控除、均等割、森林環境税を分けて表示し、<strong>住民税がかからない年収（非課税ライン）</strong>も判定します。令和8年度税制改正で引き上げられた給与所得控除の最低保障額74万円を反映した、2026年の給与収入に対する2027年度分（2027年6月〜）の計算です。</p>
+
+<div class="tool card" data-tool="juminzei">
+<form>
+<div class="grid">
+<div class="field"><label for="j-income">年収（額面・2026年1〜12月）</label><div class="unit"><input id="j-income" name="income" type="number" inputmode="decimal" min="0" step="1" value="500"><span>万円</span></div><span class="hint">源泉徴収票の「支払金額」。ボーナス込み</span></div>
+<div class="field"><label for="j-age">年齢</label><div class="unit"><input id="j-age" name="age" type="number" inputmode="numeric" min="15" max="90" value="30"><span>歳</span></div><span class="hint">社会保険料の自動概算に使用（40〜64歳は介護保険料）</span></div>
+<div class="field"><label for="j-shaho">社会保険料（年額・任意）</label><div class="unit"><input id="j-shaho" name="shaho" type="number" inputmode="decimal" min="0" step="0.1" placeholder="空欄で自動"><span>万円</span></div><span class="hint">源泉徴収票の「社会保険料等の金額」。空欄なら協会けんぽ東京の料率で概算</span></div>
+<div class="field"><label for="j-ippan">扶養親族（16〜18歳・23〜69歳）</label><div class="unit"><input id="j-ippan" name="ippan" type="number" inputmode="numeric" min="0" max="10" value="0"><span>人</span></div><span class="hint">扶養控除33万円／人</span></div>
+<div class="field"><label for="j-tokutei">うち大学生世代（19〜22歳）</label><div class="unit"><input id="j-tokutei" name="tokutei" type="number" inputmode="numeric" min="0" max="10" value="0"><span>人</span></div><span class="hint">特定扶養控除45万円／人（左の人数とは別に入力）</span></div>
+<div class="field"><label for="j-under16">16歳未満の子</label><div class="unit"><input id="j-under16" name="under16" type="number" inputmode="numeric" min="0" max="10" value="0"><span>人</span></div><span class="hint">控除はないが非課税ラインの人数に入ります</span></div>
+<div class="field"><label for="j-other">その他の所得控除（住民税）</label><div class="unit"><input id="j-other" name="other" type="number" inputmode="decimal" min="0" step="0.1" value="0"><span>万円</span></div><span class="hint">iDeCo掛金・生命保険料控除・医療費控除など</span></div>
+<div class="field"><label for="j-kyuchi">お住まいの地域（級地）</label><select id="j-kyuchi" name="kyuchi"><option value="1" selected>1級地（東京23区・政令市など）</option><option value="2">2級地（県庁所在市など）</option><option value="3">3級地（その他の市町村）</option></select><span class="hint">均等割の非課税ラインだけに影響します</span></div>
+</div>
+<div class="radio-row">
+<label><input type="checkbox" name="spouse"> 配偶者控除あり（配偶者の年収136万円以下）</label>
+<label><input type="checkbox" name="tokurei"> 本人が障害者・未成年者・寡婦・ひとり親</label>
+</div>
+<div class="actions"><button type="submit" class="btn btn-calc">住民税を計算する</button></div>
+</form>
+<div class="result is-empty" aria-live="polite"><div class="big">年収を入力すると住民税が表示されます</div><p class="note">JavaScriptが無効の場合は、下の早見表をご覧ください。</p></div>
+<div data-hikazei></div>
+<p class="note">前提: 給与収入のみの会社員。令和9年度分（令和8年中の所得）の個人住民税として、所得割10%（市区町村6%・道府県4%）、均等割4,000円、森林環境税1,000円、基礎控除43万円、給与所得控除の最低保障74万円で計算。配偶者特別控除、老人扶養親族、住宅ローン控除・ふるさと納税などの税額控除、自治体独自の超過課税は含みません。</p>
+</div>
+
+<div class="cta">
+<strong>住民税とあわせて確認</strong>
+<ul>
+<li>所得税・社会保険料を含めた手取りは → <a href="/calc-hub/tedori/">年収から手取り計算</a></li>
+<li>住民税所得割の約2割まで寄附できる → <a href="/calc-hub/furusato/">ふるさと納税 控除上限額シミュレーター</a></li>
+<li>退職した翌年の住民税に備える → <a href="/calc-hub/shitsugyo-hoken/">失業保険の受給額シミュレーター</a>（基本手当は非課税）／<a href="/calc-hub/taishokukin/">退職金の手取り計算</a>（退職金の住民税は分離課税）</li>
+<li>残業代で年収が増えると翌年の住民税も増えます → <a href="/calc-hub/zangyo/">残業代計算・固定残業代チェッカー</a></li>
+<li>住民税を払った後の家計で → <a href="/calc-hub/jutaku-loan/">住宅ローン返済シミュレーター</a>／<a href="/calc-hub/tsumitate/">積立シミュレーター</a></li>
+<li>家族のパート収入が扶養の範囲か → <a href="/calc-hub/nenshu-no-kabe/">年収の壁 判定ツール</a>（住民税119万円・扶養控除136万円の壁）</li>
+</ul>
+</div>
+
+<h2>年収別 住民税の早見表（2027年度分）</h2>
+<p class="note" data-quick-caption>条件: 30歳・1級地・社会保険料は自動概算・その他の控除なし（JSが有効なら上の入力に連動して再計算します）</p>
+<div class="table-wrap"><table>
+<thead><tr><th>年収</th><th class="num">独身（年額）</th><th class="num">独身（月額）</th><th class="num">配偶者控除あり</th><th class="num">配偶者＋高校生</th><th class="num">配偶者＋大学生</th></tr></thead>
+<tbody data-quick>
+<tr><td class="num">100万円</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">0</td></tr>
+<tr><td class="num">119万円</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">0</td></tr>
+<tr><td class="num">150万円</td><td class="num">13,100</td><td class="num">1,000</td><td class="num">0</td><td class="num">0</td><td class="num">0</td></tr>
+<tr><td class="num">200万円</td><td class="num">55,500</td><td class="num">4,600</td><td class="num">20,000</td><td class="num">0</td><td class="num">0</td></tr>
+<tr><td class="num">300万円</td><td class="num">115,600</td><td class="num">9,600</td><td class="num">80,100</td><td class="num">44,600</td><td class="num">26,100</td></tr>
+<tr><td class="num">400万円</td><td class="num">175,500</td><td class="num">14,600</td><td class="num">140,000</td><td class="num">104,500</td><td class="num">86,000</td></tr>
+<tr><td class="num">500万円</td><td class="num">243,000</td><td class="num">20,200</td><td class="num">210,000</td><td class="num">172,000</td><td class="num">153,500</td></tr>
+<tr><td class="num">600万円</td><td class="num">307,200</td><td class="num">25,600</td><td class="num">274,200</td><td class="num">241,200</td><td class="num">229,200</td></tr>
+<tr><td class="num">700万円</td><td class="num">375,500</td><td class="num">31,200</td><td class="num">342,500</td><td class="num">309,500</td><td class="num">297,500</td></tr>
+<tr><td class="num">800万円</td><td class="num">453,000</td><td class="num">37,700</td><td class="num">420,000</td><td class="num">387,000</td><td class="num">375,000</td></tr>
+<tr><td class="num">1,000万円</td><td class="num">637,800</td><td class="num">53,100</td><td class="num">604,800</td><td class="num">571,800</td><td class="num">559,800</td></tr>
+<tr><td class="num">1,200万円</td><td class="num">827,700</td><td class="num">68,900</td><td class="num">827,700</td><td class="num">794,700</td><td class="num">782,700</td></tr>
+<tr><td class="num">1,500万円</td><td class="num">1,108,700</td><td class="num">92,300</td><td class="num">1,108,700</td><td class="num">1,075,700</td><td class="num">1,063,700</td></tr>
+</tbody></table></div>
+<p class="note">金額は円。月額は年額÷12の100円未満切捨て（端数は6月分に加算）。「高校生」は16〜18歳の一般扶養親族、「大学生」は19〜22歳の特定扶養親族。本人の合計所得が1,000万円（年収約1,195万円）を超えると配偶者控除は受けられません。</p>
+
+<h2>住民税がかからない年収（非課税ライン）早見表</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>世帯</th><th class="num">1級地</th><th class="num">2級地</th><th class="num">3級地</th><th class="num">所得割が0円</th></tr></thead>
+<tbody>
+<tr><td>単身</td><td class="num">119万円</td><td class="num">115.5万円</td><td class="num">112万円</td><td class="num">119万円</td></tr>
+<tr><td>配偶者を扶養</td><td class="num">175万円</td><td class="num">165.9万円</td><td class="num">156.8万円</td><td class="num">186万円</td></tr>
+<tr><td>配偶者＋子1人</td><td class="num">210万円</td><td class="num">197.4万円</td><td class="num">184.8万円</td><td class="num">221.4万円</td></tr>
+<tr><td>配偶者＋子2人</td><td class="num">255.7万円</td><td class="num">232.7万円</td><td class="num">212.8万円</td><td class="num">271.4万円</td></tr>
+<tr><td>配偶者＋子3人</td><td class="num">305.7万円</td><td class="num">277.7万円</td><td class="num">249.7万円</td><td class="num">321.4万円</td></tr>
+</tbody></table></div>
+<p class="note">給与収入のみ・2027年度分（2026年の年収）の目安。1〜3級地の列は均等割も含めて住民税が0円になる上限、右端は所得割だけが0円になる上限（全国共通）です。子の人数には16歳未満も含みます。障害者・未成年者・寡婦・ひとり親の本人は、合計所得135万円以下（年収209万円以下）で非課税です。</p>
+
+<h2>住民税の仕組みと計算の流れ</h2>
+<p>住民税（個人住民税）は、都道府県に納める道府県民税と市区町村に納める市町村民税の総称で、所得に比例する<strong>所得割</strong>と定額の<strong>均等割</strong>からなります。所得税と違って税率は累進ではなく一律10%なので、年収が上がっても税率は変わりません。そのぶん、低い年収帯では所得税よりも住民税のほうが重くなるのが普通です。</p>
+<h3>ステップ1: 給与所得と課税所得を出す</h3>
+<p>まず年収から給与所得控除を引いて給与所得を求めます。2026年の給与収入（2027年度分の住民税）から、年収220万円以下の人の最低保障額が65万円から74万円に引き上げられました（令和9・10年度分の特例）。次に、社会保険料控除・基礎控除43万円・配偶者控除33万円・扶養控除33万円（19〜22歳の特定扶養親族は45万円）などの所得控除を引き、1,000円未満を切り捨てたものが課税所得です。所得税の基礎控除は最大104万円に引き上げられましたが、住民税の基礎控除は43万円のまま据え置かれています。</p>
+<h3>ステップ2: 10%を掛けて調整控除を引く</h3>
+<p>課税所得に10%（市区町村6%・道府県4%）を掛け、調整控除を引きます。調整控除は、所得税と住民税の人的控除額の差（基礎控除なら5万円）で負担が増えないよう設けられた税額控除で、課税所得200万円以下なら「人的控除の差の合計」と課税所得の少ないほうの5%、200万円超なら（差の合計 −（課税所得 − 200万円））×5%、最低2,500円です。合計所得が2,500万円を超えると適用されません。市区町村分・道府県分それぞれ100円未満を切り捨てて所得割が決まります。</p>
+<h3>ステップ3: 均等割と森林環境税を足す</h3>
+<p>均等割は標準で市区町村3,000円＋道府県1,000円、これに国税の森林環境税1,000円が一緒に徴収され、合計5,000円です。神奈川県・兵庫県など独自の超過課税がある地域では数百円上乗せされます。</p>
+<h3>非課税ラインは「均等割」と「所得割」で別</h3>
+<p>前年の合計所得金額が一定以下なら住民税はかかりません。均等割の非課税限度額は、1級地なら単身で45万円、扶養がいる場合は35万円×（本人＋配偶者＋扶養親族の数）＋31万円で、2級地・3級地は基本額と加算額が少し低くなります。所得割の非課税限度額は全国共通で、単身45万円、扶養がいる場合は35万円×人数＋42万円です。扶養家族が多い世帯では、均等割だけかかって所得割は0円という年収帯があります。</p>
+<h3>払い方: 6月から12回の天引きか、年4回の納付書</h3>
+<p>会社員は、前年の所得に対する住民税が6月から翌年5月までの給与から天引きされます（特別徴収）。年税額を12で割った100円未満の端数は、最初の6月分に寄せて徴収するのが原則です（地方税法321条の5）。自営業者や退職者は、6月・8月・10月・翌1月の年4回、納付書で払います（普通徴収）。年の途中で退職すると、残りの税額を最後の給与からまとめて引くか、普通徴収に切り替えるかを選ぶことになり、退職した翌年は収入が減っても前年の所得に対する住民税がかかる点に注意が必要です。</p>
+
+<h2>計算方法と根拠（検証日: 2026年10月12日）</h2>
+<ol>
+<li>給与所得 ＝ 年収 − 給与所得控除（220万円以下は74万円、〜360万円は30%＋8万円、〜660万円は20%＋44万円、〜850万円は10%＋110万円、850万円超は195万円）。令和9・10年度分の特例。</li>
+<li>社会保険料（空欄時）＝ 協会けんぽ東京 令和8年度料率・厚生年金18.3%・雇用保険0.5%による本人負担の概算（<a href="/calc-hub/tedori/">手取り計算</a>と同じ）。</li>
+<li>課税所得 ＝ 給与所得 − 社会保険料 − 基礎控除43万円 − 配偶者控除（本人の合計所得900万円以下33万円、950万円以下22万円、1,000万円以下11万円）− 扶養控除（33万円、特定45万円）− その他の所得控除。1,000円未満切捨て。</li>
+<li>調整控除 ＝ 人的控除差（基礎5万円＋配偶者5万／4万／2万円＋一般扶養5万円＋特定扶養18万円）を使い上記の式で計算し、市区町村3：道府県2で按分。</li>
+<li>所得割 ＝ 課税所得×6% − 調整控除（市区町村分）、課税所得×4% − 調整控除（道府県分）。それぞれ100円未満切捨て。</li>
+<li>非課税判定 ＝ 均等割: 合計所得 ≦ 基本額×（人数）＋10万円＋加算額（扶養ありのみ。1級地35万円・21万円、2級地31.5万円・18.9万円、3級地28万円・16.8万円）。所得割: 総所得金額等 ≦ 35万円×（人数）＋10万円＋32万円（扶養ありのみ）。障害者・未成年者・寡婦・ひとり親は合計所得135万円以下で非課税。</li>
+<li>特別徴収の月額 ＝ 年税額÷12の100円未満切捨て、端数は6月分に合算。普通徴収 ＝ 4期、1,000円未満の端数は第1期に合算。</li>
+</ol>
+<ul class="sources">
+<li><a href="https://www.soumu.go.jp/main_sosiki/jichi_zeisei/czaisei/czaisei_seido/150790_06.html" target="_blank" rel="noopener">総務省 個人住民税</a>（所得割10%：道府県民税4%・市町村民税6%、均等割、森林環境税）</li>
+<li><a href="https://www.city.nagoya.jp/kurashi/zeikin/1037356/1011880/1011899/1045304.html" target="_blank" rel="noopener">名古屋市 令和9年度分の市民税・県民税の改正点</a>（給与所得控除の最低保障74万円、非課税となる給与収入119万円、扶養親族の所得要件62万円）</li>
+<li><a href="https://www.city.chiba.jp/zaiseikyoku/zeimu/kazeikanri/zeiseikaiseijuminzei2027.html" target="_blank" rel="noopener">千葉市 令和9年度から適用される個人市・県民税の主な改正点</a> ／ <a href="https://www.city.chiba.jp/faq/zaiseikyoku/zeimu/kazeikanri/2353.html" target="_blank" rel="noopener">千葉市 住民税はいくらまでなら課税されませんか</a>（非課税の基準）</li>
+<li><a href="https://www.city.ota.tokyo.jp/seikatsu/zeikin/kazei/hikazei.html" target="_blank" rel="noopener">大田区 特別区民税・都民税が非課税となる方</a>（均等割・所得割の非課税限度額）</li>
+<li><a href="https://www.city.funabashi.lg.jp/kurashi/zei/007/003/p028458.html" target="_blank" rel="noopener">船橋市 調整控除</a> ／ <a href="https://www.city.nerima.tokyo.jp/kurashi/zei/jyuminzei/zeigakukojo/choseikojo.html" target="_blank" rel="noopener">練馬区 調整控除</a>（人的控除差・2,500円の最低額）</li>
+<li><a href="https://www.city.bunkyo.lg.jp/b008/p007528.html" target="_blank" rel="noopener">文京区 森林環境税</a>（均等割と併せて年1,000円）</li>
+</ul>
+<p class="note">本ツールの結果は概算であり、住民税額の正確性を保証するものではありません。実際の税額は前年の所得・控除の申告内容と市区町村の条例に基づいて決まり、住民税決定通知書（特別徴収税額の決定通知書）に記載されます。個別の税務相談は税理士または市区町村の住民税担当窓口にご相談ください。</p>
+<section class="faq" id="faq"><h2>よくある質問</h2><details><summary>住民税はいくらかかりますか？計算方法は？</summary><p>住民税（所得割）＝（給与所得 − 所得控除）× 10% − 調整控除、これに均等割4,000円と森林環境税1,000円を足したものが年額です。給与所得は年収から給与所得控除を引いた額、所得控除は社会保険料・基礎控除43万円・配偶者控除33万円・扶養控除33万円（19〜22歳は45万円）などです。例えば独身・年収500万円・社会保険料約72万円なら、課税所得は約240万円、所得割は約23.8万円、合計で年約24.3万円（月約2万円）が目安です。</p></details><details><summary>住民税がかからない年収はいくらですか？</summary><p>2026年（令和8年）の給与収入に対する2027年度分の住民税は、単身なら年収119万円以下で非課税になります（東京23区・政令市などの1級地）。給与所得控除の最低保障額が74万円に引き上げられたため、前年度の110万円から9万円上がりました。配偶者を扶養していれば175万円、配偶者と子1人なら210万円が目安です。地方の市町村（2級地・3級地）では限度額が少し低く、単身で115.5万円・112万円です。なお所得税がかからない年収（178万円）とは基準が異なります。</p></details><details><summary>住民税はいつから、いつの所得に対してかかりますか？</summary><p>住民税は前年1〜12月の所得に対して課税され、6月から翌年5月までの12回に分けて給与から天引き（特別徴収）されます。2026年の年収に対する住民税は、2027年6月から2028年5月の給与で払うことになります。新卒1年目は前年の所得がないため住民税が引かれず、2年目の6月から引かれ始めて手取りが減るのはこのためです。退職して給与天引きできなくなった場合は、自宅に届く納付書で年4回に分けて払う普通徴収に切り替わります。</p></details><details><summary>均等割と所得割の違いは何ですか？</summary><p>所得割は所得に比例してかかる部分で、税率は一律10%（市区町村民税6%＋道府県民税4%、政令指定都市は8%＋2%）です。均等割は所得にかかわらず一定額を負担する部分で、標準は市区町村3,000円＋道府県1,000円です。2024年度からはこれと一緒に国税の森林環境税1,000円が徴収されるため、合計5,000円になります。一部の県や市は独自の森林・環境税などを上乗せしており、均等割が数百円高い地域もあります。</p></details><details><summary>ふるさと納税やiDeCo、医療費控除をすると住民税はどれくらい減りますか？</summary><p>iDeCoの掛金・生命保険料控除・医療費控除などの所得控除は、控除額の10%だけ所得割が減ります。例えばiDeCoで年24万円を拠出すると、住民税は約2.4万円減ります（所得税も別に減ります）。ふるさと納税は税額控除なので仕組みが違い、上限額の範囲内なら寄附額から2,000円を引いた額のほとんどが翌年度の住民税と所得税から差し引かれます。本ツールでは所得控除を「その他の所得控除」欄に入れると反映できます。ふるさと納税の上限は別のツールで確認してください。</p></details><details><summary>計算結果はどのくらい正確ですか？</summary><p>給与収入のみの会社員を想定した概算です。社会保険料は協会けんぽ東京支部の令和8年度料率で自動計算しますが、給与明細や源泉徴収票の社会保険料を入力するとより正確になります。住宅ローン控除・配当控除・寄附金税額控除（ふるさと納税）・障害者控除・ひとり親控除の金額、配偶者特別控除、老人扶養親族の控除額の違い、自治体独自の超過課税には対応していません。正確な税額は、毎年5〜6月に届く住民税決定通知書や市区町村の窓口でご確認ください。個別の税務相談は税理士へどうぞ。</p></details></section>
+</main>
+<div class="ad-slot ad-bottom" data-ad="300x250" data-ad-mobile="300x250"></div>
+<footer class="site-footer"><div class="wrap">
+<p class="disclaimer">本サイトの計算結果は概算であり、正確性を保証するものではありません。実際の金額は各機関・制度の最新情報をご確認ください。本サイトはアフィリエイト広告（A8.net・楽天アフィリエイト等）を利用しています。</p>
+<p><a href="/calc-hub/about/">このサイトについて</a> · <a href="/calc-hub/privacy/">プライバシーポリシー</a> · 最終更新: 2026-10-12</p>
+<p>© 2026 かんたんお金計算</p>
+</div></footer>
+<script>window.ADS_ENABLED = false;</script>
+<script src="/calc-hub/assets/ads.js" defer></script>
+<script src="/calc-hub/assets/app.js" defer></script>
+</body>
+</html>

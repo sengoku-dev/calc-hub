@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>積立シミュレーター（複利・取り崩し・FIRE） | かんたんお金計算</title>
+<meta name="description" content="毎月の積立額・想定利回り・年数から将来の資産額を複利で計算。目標額から必要な毎月積立額を逆算し、4%ルールでの取り崩し可能年数も試算。資産推移グラフと年別表つき。新NISAの年間360万円・生涯1,800万円の枠との関係も解説。">
+<link rel="canonical" href="https://sengoku-dev.github.io/calc-hub/tsumitate/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="積立シミュレーター（複利・取り崩し・FIRE） | かんたんお金計算">
+<meta property="og:description" content="毎月の積立額・想定利回り・年数から将来の資産額を複利で計算。目標額から必要な毎月積立額を逆算し、4%ルールでの取り崩し可能年数も試算。資産推移グラフと年別表つき。新NISAの年間360万円・生涯1,800万円の枠との関係も解説。">
+<meta property="og:url" content="https://sengoku-dev.github.io/calc-hub/tsumitate/">
+<meta property="og:site_name" content="かんたんお金計算">
+<meta property="og:locale" content="ja_JP">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="/calc-hub/assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/calc-hub/assets/style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"積立シミュレーター（複利・取り崩し・FIRE）","url":"https://sengoku-dev.github.io/calc-hub/tsumitate/","applicationCategory":"UtilitiesApplication","operatingSystem":"Web","description":"毎月の積立額・想定利回り・年数から将来の資産額を複利で計算。目標額から必要な毎月積立額を逆算し、4%ルールでの取り崩し可能年数も試算。資産推移グラフと年別表つき。新NISAの年間360万円・生涯1,800万円の枠との関係も解説。","offers":{"@type":"Offer","price":"0","priceCurrency":"JPY"},"inLanguage":"ja"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"想定利回りは何%にすればいいですか？","acceptedAnswer":{"@type":"Answer","text":"過去の実績では、全世界株式のインデックスは年率5〜7%程度、先進国債券を混ぜたバランス型は3〜4%程度で推移してきましたが、将来も同じになる保証はありません。計画を立てるときは控えめに3〜5%で試算し、上振れしたら幸運と考えるのが堅実です。本ツールは手数料（信託報酬）とインフレを考慮していないため、実質的な購買力で考えるなら利回りから1〜2%差し引いて入力してください。"}},{"@type":"Question","name":"4%ルールとは何ですか？","acceptedAnswer":{"@type":"Answer","text":"米国の研究（トリニティ・スタディ）に由来する目安で、「退職時の資産の4%を初年度に取り崩し、以後はインフレ調整した同額を取り崩しても、30年間は資産が尽きない可能性が高い」というものです。年間支出の25倍の資産があればFIRE（早期リタイア）できる、という話はこの逆算です。米国株中心の過去データに基づく経験則なので、日本の投資家は3〜3.5%で見るほうが安全という意見もあります。"}},{"@type":"Question","name":"新NISAの枠で足りますか？","acceptedAnswer":{"@type":"Answer","text":"新NISAは年間投資枠がつみたて投資枠120万円＋成長投資枠240万円の計360万円、生涯の非課税保有限度額が1,800万円（うち成長投資枠は1,200万円まで）です。毎月10万円までならつみたて投資枠だけで収まり、毎月30万円までなら両枠の併用で非課税にできます。毎月5万円なら30年で1,800万円に達します。売却すると翌年に枠が復活するのも新NISAの特徴です。"}},{"@type":"Question","name":"積立の結果に税金はかかりますか？","acceptedAnswer":{"@type":"Answer","text":"NISA口座なら運用益は非課税です。特定口座や一般口座では、売却益や分配金に20.315%（所得税15.315%＋住民税5%）がかかります。本ツールの結果は税引前なので、課税口座で運用する場合は「運用益にかかる税の目安」の行を参考にしてください。iDeCoは運用中非課税ですが、受取時に退職所得または年金として課税されます。"}},{"@type":"Question","name":"途中で積立額を変えたり、一括投資したりした場合は？","acceptedAnswer":{"@type":"Answer","text":"「初期投資額」欄にまとまった金額を入れると、最初に一括で投資した前提で計算します。積立額の変更には対応していないので、期間を分けて2回計算し、1回目の最終資産を2回目の初期投資額に入れると近い結果が得られます。"}},{"@type":"Question","name":"下落相場でも積立を続けるべきですか？","acceptedAnswer":{"@type":"Answer","text":"積立投資は価格が下がったときに多くの口数を買えるため、長期で見ると下落局面は必ずしも不利ではありません。ただし将来の値動きは誰にも分からず、元本割れのリスクは常にあります。生活防衛資金を確保したうえで、使う予定のないお金で続けることが前提です。本サイトは特定の金融商品を推奨するものではありません。"}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"かんたんお金計算","item":"https://sengoku-dev.github.io/calc-hub/"},{"@type":"ListItem","position":2,"name":"積立シミュレーター（複利・取り崩し・FIRE）","item":"https://sengoku-dev.github.io/calc-hub/tsumitate/"}]}</script>
+
+</head>
+<body>
+<header class="site-header"><div class="wrap"><a class="brand" href="/calc-hub/">かんたんお金計算</a><nav class="nav"><a href="/calc-hub/tedori/">手取り計算</a><a href="/calc-hub/jutaku-loan/">住宅ローン</a><a href="/calc-hub/furusato/">ふるさと納税</a><a href="/calc-hub/tsumitate/">積立シミュ</a><a href="/calc-hub/taishokukin/">退職金</a><a href="/calc-hub/shitsugyo-hoken/">失業保険</a><a href="/calc-hub/zangyo/">残業代</a><a href="/calc-hub/juminzei/">住民税</a><a href="/calc-hub/nenshu-no-kabe/">年収の壁</a></nav></div></header>
+<div class="ad-slot ad-top" data-ad="728x90" data-ad-mobile="320x50"></div>
+<main class="wrap">
+<p class="pr-label">当サイトはアフィリエイト広告（A8.net・楽天アフィリエイト）を利用しています。</p>
+
+<h1>積立シミュレーター（複利・取り崩し・FIRE）</h1>
+<p class="lead">毎月の積立額・想定利回り・年数から、<strong>複利で増えた将来の資産額</strong>を計算します。目標額から必要な毎月の積立額を逆算し、4%ルールで取り崩した場合に何年もつかも試算。新NISAの非課税枠との関係もあわせて解説します。</p>
+
+<div class="tool card" data-tool="tsumitate">
+<form>
+<div class="grid">
+<div class="field"><label for="s-monthly">毎月の積立額</label><div class="unit"><input id="s-monthly" name="monthly" type="number" inputmode="decimal" min="0" step="0.5" value="3"><span>万円</span></div></div>
+<div class="field"><label for="s-rate">想定利回り（年率）</label><div class="unit"><input id="s-rate" name="rate" type="number" inputmode="decimal" min="-20" max="30" step="0.1" value="5"><span>%</span></div><span class="hint">税引前・手数料考慮なし</span></div>
+<div class="field"><label for="s-years">積立期間</label><div class="unit"><input id="s-years" name="years" type="number" inputmode="numeric" min="1" max="60" value="20"><span>年</span></div></div>
+<div class="field"><label for="s-initial">初期投資額（任意）</label><div class="unit"><input id="s-initial" name="initial" type="number" inputmode="numeric" min="0" step="10" value="0"><span>万円</span></div></div>
+<div class="field"><label for="s-target">目標額（逆算用・任意）</label><div class="unit"><input id="s-target" name="target" type="number" inputmode="numeric" min="0" step="100" value="2000"><span>万円</span></div></div>
+<div class="field"><label for="s-wrate">取り崩し率（年）</label><div class="unit"><input id="s-wrate" name="wrate" type="number" inputmode="decimal" min="0.5" max="20" step="0.5" value="4"><span>%</span></div><span class="hint">4%ルールなら4</span></div>
+<div class="field"><label for="s-wreturn">取り崩し中の想定利回り</label><div class="unit"><input id="s-wreturn" name="wreturn" type="number" inputmode="decimal" min="-20" max="30" step="0.1" value="3"><span>%</span></div><span class="hint">退職後は保守的に運用する前提</span></div>
+</div>
+<div class="actions"><button type="submit" class="btn btn-calc">シミュレーションする</button></div>
+</form>
+<div class="result is-empty" aria-live="polite"><div class="big">積立額を入力すると結果が表示されます</div><p class="note">JavaScriptが無効の場合は、下の早見表をご覧ください。</p></div>
+<div class="chart" data-chart></div>
+<div data-reverse></div>
+<div data-withdraw></div>
+</div>
+
+<div class="cta">
+<strong>積立の原資を確認する</strong>
+<ul>
+<li>毎月いくら積み立てられる？ まずは → <a href="/calc-hub/tedori/">年収から手取り計算</a></li>
+<li>住宅ローンの繰上返済と積立、どちらを優先？ → <a href="/calc-hub/jutaku-loan/">住宅ローン返済シミュレーター</a></li>
+<li>退職金を一括投資する前に → <a href="/calc-hub/taishokukin/">退職金の手取り計算</a></li>
+<li>生活防衛資金の目安に、離職時の収入を知る → <a href="/calc-hub/shitsugyo-hoken/">失業保険の受給額シミュレーター</a></li>
+<li>残業代を積立の原資にするなら → <a href="/calc-hub/zangyo/">残業代計算・固定残業代チェッカー</a></li>
+<li>iDeCoの掛金で住民税はいくら減る？ → <a href="/calc-hub/juminzei/">住民税シミュレーター</a>（その他の所得控除に入力）</li>
+<li>パート収入を増やして積立に回すなら → <a href="/calc-hub/nenshu-no-kabe/">年収の壁 判定ツール</a>（130万円の壁と世帯の手取り）</li>
+</ul>
+</div>
+
+<h2>年別 資産推移</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>経過年数</th><th class="num">積立元本</th><th class="num">運用益</th><th class="num">資産額</th></tr></thead>
+<tbody data-yearly><tr><td colspan="4" class="note">条件を入力すると年別の表が表示されます。</td></tr></tbody>
+</table></div>
+
+<h2>毎月積立額・利回り別 早見表</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>毎月</th><th class="num">利回り</th><th class="num">10年後</th><th class="num">20年後</th><th class="num">30年後</th><th class="num">30年の元本</th></tr></thead>
+<tbody>
+<tr><td class="num">1万円</td><td class="num">3%</td><td class="num">1,397,414</td><td class="num">3,283,020</td><td class="num">5,827,369</td><td class="num">3,600,000</td></tr>
+<tr><td class="num">1万円</td><td class="num">5%</td><td class="num">1,552,823</td><td class="num">4,110,337</td><td class="num">8,322,586</td><td class="num">3,600,000</td></tr>
+<tr><td class="num">3万円</td><td class="num">3%</td><td class="num">4,192,243</td><td class="num">9,849,060</td><td class="num">17,482,107</td><td class="num">10,800,000</td></tr>
+<tr><td class="num">3万円</td><td class="num">5%</td><td class="num">4,658,468</td><td class="num">12,331,010</td><td class="num">24,967,759</td><td class="num">10,800,000</td></tr>
+<tr><td class="num">5万円</td><td class="num">3%</td><td class="num">6,987,071</td><td class="num">16,415,100</td><td class="num">29,136,844</td><td class="num">18,000,000</td></tr>
+<tr><td class="num">5万円</td><td class="num">5%</td><td class="num">7,764,114</td><td class="num">20,551,683</td><td class="num">41,612,932</td><td class="num">18,000,000</td></tr>
+<tr><td class="num">10万円</td><td class="num">3%</td><td class="num">13,974,142</td><td class="num">32,830,200</td><td class="num">58,273,688</td><td class="num">36,000,000</td></tr>
+<tr><td class="num">10万円</td><td class="num">5%</td><td class="num">15,528,228</td><td class="num">41,103,367</td><td class="num">83,225,864</td><td class="num">36,000,000</td></tr>
+</tbody></table></div>
+<p class="note">金額は円、税引前。月次複利で計算。</p>
+
+<h2>複利の効果は「時間」で決まる</h2>
+<p>毎月3万円を年5%で積み立てると、10年で466万円（元本360万円）、20年で1,233万円（元本720万円）、30年で2,497万円（元本1,080万円）になります。元本は年数に比例して増えるだけですが、運用益は10年で106万円、20年で513万円、30年で1,417万円と加速度的に増えます。運用益がさらに運用益を生む、これが複利です。</p>
+<p>逆に言うと、同じ2,000万円を目指すなら、30年かければ毎月2.4万円で足りますが、20年なら毎月4.9万円、10年なら毎月12.9万円が必要になります（年5%の場合）。「早く始める」ことが積立額を抑える最大の方法です。</p>
+
+<h2>新NISAの枠との関係</h2>
+<p>2024年に始まった新NISAは、<strong>年間360万円（つみたて投資枠120万円＋成長投資枠240万円）、生涯1,800万円</strong>までの投資から生じる利益が無期限で非課税になります。上の結果に表示している「運用益にかかる税の目安」は、NISA口座ならゼロになる金額です。</p>
+<ul>
+<li>毎月10万円以内 → つみたて投資枠だけで収まります（対象は金融庁の基準を満たす投資信託）。</li>
+<li>毎月10万〜30万円 → 成長投資枠を併用すれば非課税にできます。</li>
+<li>生涯枠1,800万円は「買った金額（簿価）」で数えるので、値上がり分で枠が減ることはありません。毎月5万円なら30年、毎月10万円なら15年で使い切ります。</li>
+<li>売却すると翌年にその簿価分の枠が復活するため、ライフイベントで一度取り崩しても再び非課税で積み立てられます。</li>
+</ul>
+<p>なお、NISAは利益が非課税になる一方で、損失が出ても他の口座の利益と相殺（損益通算）できません。また、本サイトは特定の金融商品や証券会社の利用を勧めるものではありません。</p>
+
+<h2>取り崩しと「4%ルール」の読み方</h2>
+<p>積み立てた資産をいつか使うとき、「毎年いくらなら取り崩しても大丈夫か」が問題になります。本ツールの取り崩し欄は、積立終了時の資産に取り崩し率（初期値4%）を掛けた金額を毎年定額で取り崩し、残りを「取り崩し中の想定利回り」で運用し続けた場合に資産が何年もつかを計算しています。</p>
+<p>運用利回りが取り崩し率以上であれば理論上は減りませんが、実際の相場は毎年一定ではありません。特に取り崩し開始直後に大きな下落が来ると、同じ平均利回りでも資産が早く尽きます（リターン順序リスク）。そのため、取り崩し率は3〜4%に抑える、下落時は取り崩し額を減らす、現金クッションを2〜3年分持つ、といった対策が一般的に語られています。</p>
+<p>FIRE（経済的自立・早期リタイア）の目安としてよく挙げられる「年間支出の25倍」は、4%ルールの裏返しです。年間支出300万円なら7,500万円、同じ条件で毎月10万円・年5%なら約28年かかる計算になります。ただし年金受給前の社会保険料（国民健康保険・国民年金）や税金は別途かかるため、支出には必ずそれらを含めてください。</p>
+
+<h2>計算方法と根拠</h2>
+<ul>
+<li>資産額: 月利 r ＝ 年利÷12 として、毎月末に「資産×(1＋r)＋積立額」を積み上げる月次複利。初期投資額は最初から運用に回す前提。</li>
+<li>必要積立額（逆算）: 目標額から初期投資額の将来価値を引き、年金終価係数 ((1＋r)<sup>n</sup>−1)÷r で割った値。</li>
+<li>取り崩し: 年間取り崩し額 ＝ 積立終了時の資産×取り崩し率（定額）。毎年「資産×(1＋取り崩し中利回り)−取り崩し額」を繰り返し、資産がゼロになる年数を数える（100年で打ち切り）。</li>
+<li>税金・手数料・インフレは考慮していません。課税口座の税率20.315%は参考表示です。</li>
+</ul>
+<ul class="sources">
+<li><a href="https://www.fsa.go.jp/policy/nisa2/about/index.html" target="_blank" rel="noopener">金融庁 NISAを知る（新しいNISAの制度概要）</a></li>
+<li><a href="https://www.fsa.go.jp/policy/nisa2/tools/index.html" target="_blank" rel="noopener">金融庁 資産運用シミュレーション</a>（計算方法の確認に使用）</li>
+<li><a href="https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/1463.htm" target="_blank" rel="noopener">国税庁 タックスアンサー No.1463 株式等を譲渡したときの課税（申告分離課税）</a></li>
+</ul>
+<p class="note">本ツールの結果は一定の利回りを仮定した試算であり、将来の運用成果を示すものでも保証するものでもありません。投資には元本割れのリスクがあります。投資判断はご自身の責任で行ってください。</p>
+<section class="faq" id="faq"><h2>よくある質問</h2><details><summary>想定利回りは何%にすればいいですか？</summary><p>過去の実績では、全世界株式のインデックスは年率5〜7%程度、先進国債券を混ぜたバランス型は3〜4%程度で推移してきましたが、将来も同じになる保証はありません。計画を立てるときは控えめに3〜5%で試算し、上振れしたら幸運と考えるのが堅実です。本ツールは手数料（信託報酬）とインフレを考慮していないため、実質的な購買力で考えるなら利回りから1〜2%差し引いて入力してください。</p></details><details><summary>4%ルールとは何ですか？</summary><p>米国の研究（トリニティ・スタディ）に由来する目安で、「退職時の資産の4%を初年度に取り崩し、以後はインフレ調整した同額を取り崩しても、30年間は資産が尽きない可能性が高い」というものです。年間支出の25倍の資産があればFIRE（早期リタイア）できる、という話はこの逆算です。米国株中心の過去データに基づく経験則なので、日本の投資家は3〜3.5%で見るほうが安全という意見もあります。</p></details><details><summary>新NISAの枠で足りますか？</summary><p>新NISAは年間投資枠がつみたて投資枠120万円＋成長投資枠240万円の計360万円、生涯の非課税保有限度額が1,800万円（うち成長投資枠は1,200万円まで）です。毎月10万円までならつみたて投資枠だけで収まり、毎月30万円までなら両枠の併用で非課税にできます。毎月5万円なら30年で1,800万円に達します。売却すると翌年に枠が復活するのも新NISAの特徴です。</p></details><details><summary>積立の結果に税金はかかりますか？</summary><p>NISA口座なら運用益は非課税です。特定口座や一般口座では、売却益や分配金に20.315%（所得税15.315%＋住民税5%）がかかります。本ツールの結果は税引前なので、課税口座で運用する場合は「運用益にかかる税の目安」の行を参考にしてください。iDeCoは運用中非課税ですが、受取時に退職所得または年金として課税されます。</p></details><details><summary>途中で積立額を変えたり、一括投資したりした場合は？</summary><p>「初期投資額」欄にまとまった金額を入れると、最初に一括で投資した前提で計算します。積立額の変更には対応していないので、期間を分けて2回計算し、1回目の最終資産を2回目の初期投資額に入れると近い結果が得られます。</p></details><details><summary>下落相場でも積立を続けるべきですか？</summary><p>積立投資は価格が下がったときに多くの口数を買えるため、長期で見ると下落局面は必ずしも不利ではありません。ただし将来の値動きは誰にも分からず、元本割れのリスクは常にあります。生活防衛資金を確保したうえで、使う予定のないお金で続けることが前提です。本サイトは特定の金融商品を推奨するものではありません。</p></details></section>
+</main>
+<div class="ad-slot ad-bottom" data-ad="300x250" data-ad-mobile="300x250"></div>
+<footer class="site-footer"><div class="wrap">
+<p class="disclaimer">本サイトの計算結果は概算であり、正確性を保証するものではありません。実際の金額は各機関・制度の最新情報をご確認ください。本サイトはアフィリエイト広告（A8.net・楽天アフィリエイト等）を利用しています。</p>
+<p><a href="/calc-hub/about/">このサイトについて</a> · <a href="/calc-hub/privacy/">プライバシーポリシー</a> · 最終更新: 2026-10-11</p>
+<p>© 2026 かんたんお金計算</p>
+</div></footer>
+<script>window.ADS_ENABLED = false;</script>
+<script src="/calc-hub/assets/ads.js" defer></script>
+<script src="/calc-hub/assets/app.js" defer></script>
+</body>
+</html>

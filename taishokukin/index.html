@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>退職金の手取り計算（退職所得控除・税金シミュレーター） | かんたんお金計算</title>
+<meta name="description" content="退職金の額と勤続年数を入れるだけで、退職所得控除・課税退職所得・所得税（復興特別所得税込み）・住民税と手取り額を概算。勤続20年以下は年40万円、20年超は年70万円の控除、課税は原則2分の1。退職金額×勤続年数の早見表つき。">
+<link rel="canonical" href="https://sengoku-dev.github.io/calc-hub/taishokukin/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="退職金の手取り計算（退職所得控除・税金シミュレーター） | かんたんお金計算">
+<meta property="og:description" content="退職金の額と勤続年数を入れるだけで、退職所得控除・課税退職所得・所得税（復興特別所得税込み）・住民税と手取り額を概算。勤続20年以下は年40万円、20年超は年70万円の控除、課税は原則2分の1。退職金額×勤続年数の早見表つき。">
+<meta property="og:url" content="https://sengoku-dev.github.io/calc-hub/taishokukin/">
+<meta property="og:site_name" content="かんたんお金計算">
+<meta property="og:locale" content="ja_JP">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="/calc-hub/assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/calc-hub/assets/style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"退職金の手取り計算（退職所得控除・税金シミュレーター）","url":"https://sengoku-dev.github.io/calc-hub/taishokukin/","applicationCategory":"UtilitiesApplication","operatingSystem":"Web","description":"退職金の額と勤続年数を入れるだけで、退職所得控除・課税退職所得・所得税（復興特別所得税込み）・住民税と手取り額を概算。勤続20年以下は年40万円、20年超は年70万円の控除、課税は原則2分の1。退職金額×勤続年数の早見表つき。","offers":{"@type":"Offer","price":"0","priceCurrency":"JPY"},"inLanguage":"ja"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"退職金はなぜ税金が少ないのですか？","acceptedAnswer":{"@type":"Answer","text":"長年の勤務の対価を一度に受け取る性質を考慮して、退職所得には3つの優遇があります。(1)勤続年数に応じた退職所得控除（20年で800万円、30年で1,500万円）、(2)控除後の金額をさらに2分の1にしてから税率をかける、(3)他の所得と合算しない分離課税で、給与と合わせて税率が上がらない、の3点です。結果として退職金2,000万円・勤続30年なら税負担は約40万円、実効税率は約2%にとどまります。"}},{"@type":"Question","name":"「退職所得の受給に関する申告書」を出さないとどうなりますか？","acceptedAnswer":{"@type":"Answer","text":"申告書を勤務先に提出しないと、退職所得控除が適用されず、退職金の額面に一律20.42%の所得税が源泉徴収されます。確定申告をすれば精算できますが、手続きが増えるうえ一時的に手取りが大きく減ります。退職前に必ず勤務先へ提出してください。"}},{"@type":"Question","name":"iDeCoや企業型DCの一時金も同じ計算ですか？","acceptedAnswer":{"@type":"Answer","text":"はい、一時金で受け取る場合は退職所得として同じ控除・2分の1の計算になります。ただし会社の退職金とiDeCoの一時金を近い時期に受け取ると、退職所得控除の勤続年数（加入期間）の重複部分が調整されて控除が減ります。2026年1月以降の受け取りから、iDeCoの一時金を先に受け取り後から会社の退職金を受け取る場合の調整対象期間が「前年以前4年内」から「前年以前9年内」に延長されました（退職金が先・iDeCoが後の場合は従来どおり前年以前19年内）。受取時期の設計は税理士や金融機関にご相談ください。"}},{"@type":"Question","name":"勤続年数に1年未満の端数がある場合は？","acceptedAnswer":{"@type":"Answer","text":"端数は切り上げて1年と数えます。たとえば19年と1か月なら20年、20年と1日なら21年です。本ツールでも小数で入力すると自動で切り上げます。切り上げで20年を超えると控除額の単価が40万円から70万円に上がるため、退職日を数日ずらすだけで控除が70万円変わることもあります。"}},{"@type":"Question","name":"退職金を受け取った年のふるさと納税や住民税はどうなりますか？","acceptedAnswer":{"@type":"Answer","text":"退職所得にかかる住民税は退職金から特別徴収（天引き）され、翌年度の住民税には影響しません。退職所得は分離課税なので、ふるさと納税の上限額の計算にも原則として含まれず、上限が大きく増えることはありません。退職した翌年は給与がなくても前年の給与に対する住民税の納付が残るので、資金を取り分けておくと安心です。"}},{"@type":"Question","name":"役員や勤続5年以下だと計算が変わりますか？","acceptedAnswer":{"@type":"Answer","text":"役員等として勤続5年以下で受け取る退職金（特定役員退職手当等）は2分の1の適用がありません。役員以外でも勤続5年以下の場合（短期退職手当等）は、控除後の金額のうち300万円を超える部分について2分の1が適用されません。本ツールでは「役員等（勤続5年以下）」のチェックと勤続年数から自動で判定しています。"}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"かんたんお金計算","item":"https://sengoku-dev.github.io/calc-hub/"},{"@type":"ListItem","position":2,"name":"退職金の手取り計算（退職所得控除・税金シミュレーター）","item":"https://sengoku-dev.github.io/calc-hub/taishokukin/"}]}</script>
+
+</head>
+<body>
+<header class="site-header"><div class="wrap"><a class="brand" href="/calc-hub/">かんたんお金計算</a><nav class="nav"><a href="/calc-hub/tedori/">手取り計算</a><a href="/calc-hub/jutaku-loan/">住宅ローン</a><a href="/calc-hub/furusato/">ふるさと納税</a><a href="/calc-hub/tsumitate/">積立シミュ</a><a href="/calc-hub/taishokukin/">退職金</a><a href="/calc-hub/shitsugyo-hoken/">失業保険</a><a href="/calc-hub/zangyo/">残業代</a><a href="/calc-hub/juminzei/">住民税</a><a href="/calc-hub/nenshu-no-kabe/">年収の壁</a></nav></div></header>
+<div class="ad-slot ad-top" data-ad="728x90" data-ad-mobile="320x50"></div>
+<main class="wrap">
+<p class="pr-label">当サイトはアフィリエイト広告（A8.net・楽天アフィリエイト）を利用しています。</p>
+
+<h1>退職金の手取り計算</h1>
+<p class="lead">退職金の額と勤続年数を入れると、<strong>退職所得控除・課税退職所得・所得税・住民税・手取り額</strong>を概算します。勤続20年以下は年40万円、20年超は年70万円の控除、課税は原則2分の1という退職所得の優遇を反映。退職金額×勤続年数の早見表つき。</p>
+
+<div class="tool card" data-tool="taishokukin">
+<form>
+<div class="grid">
+<div class="field"><label for="k-amount">退職金の額（額面）</label><div class="unit"><input id="k-amount" name="amount" type="number" inputmode="numeric" min="0" step="50" value="2000"><span>万円</span></div><span class="hint">企業年金やiDeCoの一時金も同時に受け取るなら合算</span></div>
+<div class="field"><label for="k-years">勤続年数</label><div class="unit"><input id="k-years" name="years" type="number" inputmode="decimal" min="0" max="60" step="0.1" value="30"><span>年</span></div><span class="hint">1年未満の端数は切り上げ</span></div>
+<div class="field"><label><input type="checkbox" name="officer"> 役員等として勤続5年以下</label><span class="hint">特定役員退職手当等（2分の1なし）</span></div>
+</div>
+<div class="actions"><button type="submit" class="btn btn-calc">手取りを計算する</button></div>
+</form>
+<div class="result is-empty" aria-live="polite"><div class="big">退職金額を入力すると手取りが表示されます</div><p class="note">JavaScriptが無効の場合は、下の早見表をご覧ください。</p></div>
+<p class="note">前提: 「退職所得の受給に関する申告書」を提出済み、障害者になったことによる退職ではない、他に同年の退職所得なし。住民税は市民税6%＋県民税4%の計10%。</p>
+</div>
+
+<div class="cta">
+<strong>退職金を受け取ったら</strong>
+<ul>
+<li>住宅ローンの残債を一括返済する前に → <a href="/calc-hub/jutaku-loan/">住宅ローン返済シミュレーター</a>（繰上返済の効果を試算）</li>
+<li>老後資金として取り崩すなら → <a href="/calc-hub/tsumitate/">積立シミュレーター</a>（4%ルールの取り崩し年数）</li>
+<li>再就職後の給与の手取りは → <a href="/calc-hub/tedori/">年収から手取り計算</a></li>
+<li>次の仕事までの収入の目安 → <a href="/calc-hub/shitsugyo-hoken/">失業保険の受給額シミュレーター</a>（定年退職も対象）</li>
+<li>退職前に未払い残業代がないか確認 → <a href="/calc-hub/zangyo/">残業代計算・固定残業代チェッカー</a>（請求期間は3年）</li>
+<li>退職した翌年も前年所得の住民税がかかります → <a href="/calc-hub/juminzei/">住民税シミュレーター</a></li>
+<li>退職後にパートで働くなら → <a href="/calc-hub/nenshu-no-kabe/">年収の壁 判定ツール</a>（60歳以上は扶養の基準180万円）</li>
+</ul>
+</div>
+
+<h2>退職金額・勤続年数別 手取り早見表</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>退職金</th><th class="num">勤続10年</th><th class="num">勤続20年</th><th class="num">勤続30年</th><th class="num">勤続38年</th></tr></thead>
+<tbody data-quick>
+<tr><td class="num">500万円</td><td class="num">4,924,500</td><td class="num">5,000,000</td><td class="num">5,000,000</td><td class="num">5,000,000</td></tr>
+<tr><td class="num">1,000万円</td><td class="num">9,493,300</td><td class="num">9,849,000</td><td class="num">10,000,000</td><td class="num">10,000,000</td></tr>
+<tr><td class="num">1,500万円</td><td class="num">13,763,400</td><td class="num">14,371,800</td><td class="num">15,000,000</td><td class="num">15,000,000</td></tr>
+<tr><td class="num">2,000万円</td><td class="num">17,970,800</td><td class="num">18,611,300</td><td class="num">19,594,300</td><td class="num">20,000,000</td></tr>
+<tr><td class="num">2,500万円</td><td class="num">21,980,500</td><td class="num">22,803,400</td><td class="num">23,915,500</td><td class="num">24,655,000</td></tr>
+<tr><td class="num">3,000万円</td><td class="num">25,888,200</td><td class="num">26,762,100</td><td class="num">28,138,200</td><td class="num">29,006,800</td></tr>
+</tbody></table></div>
+<p class="note">金額は円。退職所得控除は勤続10年400万円、20年800万円、30年1,500万円、38年2,060万円。</p>
+
+<h2>退職金の税金は3ステップで決まる</h2>
+<h3>ステップ1: 退職所得控除額を求める</h3>
+<p>勤続年数に応じて次の額が控除されます。</p>
+<ul>
+<li>勤続20年以下: <strong>40万円×勤続年数</strong>（80万円に満たない場合は80万円）</li>
+<li>勤続20年超: <strong>800万円＋70万円×（勤続年数−20年）</strong></li>
+</ul>
+<p>勤続30年なら800万＋70万×10＝1,500万円、勤続38年なら2,060万円です。障害者になったことが原因で退職した場合は100万円が加算されます。1年未満の端数は切り上げです。</p>
+<h3>ステップ2: 課税退職所得金額を求める</h3>
+<p><code>課税退職所得金額 ＝（退職金 − 退職所得控除額）× 1/2</code>（1,000円未満切捨て）</p>
+<p>退職金2,000万円・勤続30年なら（2,000万−1,500万）×1/2＝250万円。控除額を下回る退職金には税金がかかりません。</p>
+<h3>ステップ3: 税額を計算する</h3>
+<p>所得税は課税退職所得金額に通常の速算表（5〜45%）を当てはめ、復興特別所得税2.1%を上乗せします。250万円なら 250万×10%−97,500＝152,500円、×1.021＝155,702円 → 155,700円（100円未満切捨て）。住民税は一律10%で25万円。合計約40.6万円が天引きされ、手取りは約1,959万円です。給与と違って他の所得と合算しない「分離課税」なので、退職した年の給与が多くても税率は上がりません。</p>
+
+<h2>手取りを左右する3つのポイント</h2>
+<ol>
+<li><strong>「退職所得の受給に関する申告書」を必ず提出する</strong>。出さないと額面の20.42%が源泉徴収されます（確定申告で精算可能）。</li>
+<li><strong>受け取り方（一時金・年金・併用）で税金が変わる</strong>。一時金は退職所得控除、年金受け取りは公的年金等控除が使えます。控除額を大きく超える退職金は、一部を年金形式にすると税負担が平準化できる場合がありますが、年金受け取り中は運用益に相当する部分が増える一方、社会保険料（国民健康保険料など）が増えることもあるため一概には言えません。</li>
+<li><strong>iDeCo・企業型DCの一時金との受け取り時期</strong>。同じ年や近い年に受け取ると退職所得控除の勤続年数が重複調整され、控除が減ります。2026年1月以降は、iDeCoを先に受け取る場合の調整対象期間が「前年以前4年内」から「前年以前9年内」に延びたため、「iDeCoを先に受け取って5年空ける」という従来の方法は使えず、10年以上空ける必要があります。</li>
+</ol>
+
+<h2>退職金の使い道を考える前に</h2>
+<p>まとまったお金が入ると、住宅ローンの一括返済や一括投資を考えがちです。ローン金利が1%未満で住宅ローン控除が残っているなら、完済を急ぐ必要は薄いことが多く（<a href="/calc-hub/jutaku-loan/">住宅ローン返済シミュレーター</a>で繰上返済の効果を確認できます）、一括投資は相場次第で大きく目減りする可能性もあります。年金受給開始までの生活費、医療・介護の備え、取り崩しのペース（<a href="/calc-hub/tsumitate/">積立シミュレーター</a>の取り崩し欄）を先に整理するのが安全です。</p>
+
+<h2>計算方法と根拠</h2>
+<ul>
+<li>退職所得控除: 所得税法第30条。勤続20年以下 40万円×年数（最低80万円）、20年超 800万円＋70万円×（年数−20）。</li>
+<li>課税退職所得金額 ＝（退職金−控除額）×1/2、1,000円未満切捨て。特定役員退職手当等（役員等で勤続5年以下）は1/2なし。短期退職手当等（役員以外で勤続5年以下）は控除後300万円超の部分に1/2なし。</li>
+<li>所得税 ＝ 速算表による税額×1.021（復興特別所得税）、100円未満切捨て。住民税 ＝ 課税退職所得金額×10%（市町村民税6%＋道府県民税4%）、100円未満切捨て。</li>
+<li>手取り ＝ 退職金 − 所得税 − 住民税。社会保険料は退職金にはかかりません。</li>
+</ul>
+<ul class="sources">
+<li><a href="https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/1420.htm" target="_blank" rel="noopener">国税庁 タックスアンサー No.1420 退職金を受け取ったとき（退職所得）</a></li>
+<li><a href="https://www.nta.go.jp/taxes/shiraberu/taxanswer/gensen/2732.htm" target="_blank" rel="noopener">国税庁 タックスアンサー No.2732 退職手当等に対する源泉徴収</a></li>
+<li><a href="https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/2260.htm" target="_blank" rel="noopener">国税庁 タックスアンサー No.2260 所得税の税率</a></li>
+<li><a href="https://www.soumu.go.jp/main_sosiki/jichi_zeisei/czaisei/czaisei_seido/150790_06.html" target="_blank" rel="noopener">総務省 個人住民税（退職所得に対する住民税の特別徴収）</a></li>
+</ul>
+<p class="note">本ツールの結果は概算であり、税額を保証するものではありません。確定拠出年金との受け取り時期の調整、年金形式との比較、障害退職の加算など個別の事情がある場合は、税理士または勤務先の担当部署にご相談ください。</p>
+<section class="faq" id="faq"><h2>よくある質問</h2><details><summary>退職金はなぜ税金が少ないのですか？</summary><p>長年の勤務の対価を一度に受け取る性質を考慮して、退職所得には3つの優遇があります。(1)勤続年数に応じた退職所得控除（20年で800万円、30年で1,500万円）、(2)控除後の金額をさらに2分の1にしてから税率をかける、(3)他の所得と合算しない分離課税で、給与と合わせて税率が上がらない、の3点です。結果として退職金2,000万円・勤続30年なら税負担は約40万円、実効税率は約2%にとどまります。</p></details><details><summary>「退職所得の受給に関する申告書」を出さないとどうなりますか？</summary><p>申告書を勤務先に提出しないと、退職所得控除が適用されず、退職金の額面に一律20.42%の所得税が源泉徴収されます。確定申告をすれば精算できますが、手続きが増えるうえ一時的に手取りが大きく減ります。退職前に必ず勤務先へ提出してください。</p></details><details><summary>iDeCoや企業型DCの一時金も同じ計算ですか？</summary><p>はい、一時金で受け取る場合は退職所得として同じ控除・2分の1の計算になります。ただし会社の退職金とiDeCoの一時金を近い時期に受け取ると、退職所得控除の勤続年数（加入期間）の重複部分が調整されて控除が減ります。2026年1月以降の受け取りから、iDeCoの一時金を先に受け取り後から会社の退職金を受け取る場合の調整対象期間が「前年以前4年内」から「前年以前9年内」に延長されました（退職金が先・iDeCoが後の場合は従来どおり前年以前19年内）。受取時期の設計は税理士や金融機関にご相談ください。</p></details><details><summary>勤続年数に1年未満の端数がある場合は？</summary><p>端数は切り上げて1年と数えます。たとえば19年と1か月なら20年、20年と1日なら21年です。本ツールでも小数で入力すると自動で切り上げます。切り上げで20年を超えると控除額の単価が40万円から70万円に上がるため、退職日を数日ずらすだけで控除が70万円変わることもあります。</p></details><details><summary>退職金を受け取った年のふるさと納税や住民税はどうなりますか？</summary><p>退職所得にかかる住民税は退職金から特別徴収（天引き）され、翌年度の住民税には影響しません。退職所得は分離課税なので、ふるさと納税の上限額の計算にも原則として含まれず、上限が大きく増えることはありません。退職した翌年は給与がなくても前年の給与に対する住民税の納付が残るので、資金を取り分けておくと安心です。</p></details><details><summary>役員や勤続5年以下だと計算が変わりますか？</summary><p>役員等として勤続5年以下で受け取る退職金（特定役員退職手当等）は2分の1の適用がありません。役員以外でも勤続5年以下の場合（短期退職手当等）は、控除後の金額のうち300万円を超える部分について2分の1が適用されません。本ツールでは「役員等（勤続5年以下）」のチェックと勤続年数から自動で判定しています。</p></details></section>
+</main>
+<div class="ad-slot ad-bottom" data-ad="300x250" data-ad-mobile="300x250"></div>
+<footer class="site-footer"><div class="wrap">
+<p class="disclaimer">本サイトの計算結果は概算であり、正確性を保証するものではありません。実際の金額は各機関・制度の最新情報をご確認ください。本サイトはアフィリエイト広告（A8.net・楽天アフィリエイト等）を利用しています。</p>
+<p><a href="/calc-hub/about/">このサイトについて</a> · <a href="/calc-hub/privacy/">プライバシーポリシー</a> · 最終更新: 2026-10-11</p>
+<p>© 2026 かんたんお金計算</p>
+</div></footer>
+<script>window.ADS_ENABLED = false;</script>
+<script src="/calc-hub/assets/ads.js" defer></script>
+<script src="/calc-hub/assets/app.js" defer></script>
+</body>
+</html>
