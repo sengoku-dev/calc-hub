@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>iDeCo 節税シミュレーター（2026年12月改正対応）｜掛金上限6.2万円・所得税と住民税の軽減額・受取時の税 | かんたんお金計算</title>
+<meta name="description" content="年収・働き方・掛金を入れるだけで、iDeCoの所得税・住民税の節税額を概算。2026年12月分からの掛金上限（会社員6.2万円・自営業7.5万円・専業主婦2.3万円、企業年金ありは6.2万円−掛金相当額）に対応し、運用後の資産、一時金で受け取るときの退職所得課税、手数料まで差し引いた効果の目安を表示します。">
+<link rel="canonical" href="https://sengoku-dev.github.io/calc-hub/ideco/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="iDeCo 節税シミュレーター（2026年12月改正対応）｜掛金上限6.2万円・所得税と住民税の軽減額・受取時の税 | かんたんお金計算">
+<meta property="og:description" content="年収・働き方・掛金を入れるだけで、iDeCoの所得税・住民税の節税額を概算。2026年12月分からの掛金上限（会社員6.2万円・自営業7.5万円・専業主婦2.3万円、企業年金ありは6.2万円−掛金相当額）に対応し、運用後の資産、一時金で受け取るときの退職所得課税、手数料まで差し引いた効果の目安を表示します。">
+<meta property="og:url" content="https://sengoku-dev.github.io/calc-hub/ideco/">
+<meta property="og:site_name" content="かんたんお金計算">
+<meta property="og:locale" content="ja_JP">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="/calc-hub/assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/calc-hub/assets/style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"iDeCo 節税シミュレーター（2026年12月改正対応）｜掛金上限6.2万円・所得税と住民税の軽減額・受取時の税","url":"https://sengoku-dev.github.io/calc-hub/ideco/","applicationCategory":"UtilitiesApplication","operatingSystem":"Web","description":"年収・働き方・掛金を入れるだけで、iDeCoの所得税・住民税の節税額を概算。2026年12月分からの掛金上限（会社員6.2万円・自営業7.5万円・専業主婦2.3万円、企業年金ありは6.2万円−掛金相当額）に対応し、運用後の資産、一時金で受け取るときの退職所得課税、手数料まで差し引いた効果の目安を表示します。","offers":{"@type":"Offer","price":"0","priceCurrency":"JPY"},"inLanguage":"ja"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"iDeCoの掛金上限は2026年12月からいくらになりますか？","acceptedAnswer":{"@type":"Answer","text":"2026年12月1日施行の改正で、12月分の掛金（2027年1月26日引落し分）から上限が引き上げられます。企業年金のない会社員は月2.3万円から6.2万円へ、企業型DCや確定給付企業年金（DB）がある会社員と公務員は「6.2万円−企業年金等の掛金相当額」（公務員は共済掛金相当額8,000円を差し引いて5.4万円）へ、自営業・フリーランスなど第1号被保険者は国民年金基金・付加保険料との合計で6.8万円から7.5万円へ上がります。専業主婦・主夫など第3号被保険者は2.3万円のまま据え置きです。上限まで増やすには、自分で掛金額の変更手続きをする必要があります。"}},{"@type":"Question","name":"iDeCoで節税できる金額はどう計算しますか？","acceptedAnswer":{"@type":"Answer","text":"掛金の全額が「小規模企業共済等掛金控除」として所得から差し引かれるため、節税額は概ね「年間の掛金 ×（所得税率×1.021＋住民税10%）」です。所得税率5%の人が月2.3万円（年27.6万円）を拠出すると、所得税約1.4万円＋住民税2.76万円で年約4.2万円、税率20%の人なら年約8.4万円が軽くなります。会社員は年末調整、自営業は確定申告で控除を受けます。所得税・住民税がかかっていない人は、掛金を出しても節税効果はありません。"}},{"@type":"Question","name":"専業主婦（主夫）や年収が低い人もiDeCoに入るべきですか？","acceptedAnswer":{"@type":"Answer","text":"専業主婦・主夫や、所得税・住民税がかからない収入の人は、掛金による節税効果がありません。運用益が非課税になるメリットは残りますが、口座管理手数料（2026年12月分から月186円以上）がかかり、60歳まで引き出せないため、新NISAと比べて有利とは限りません。本サイトは加入を勧めるものではなく、制度の違いを理解したうえでご自身で判断してください。"}},{"@type":"Question","name":"iDeCoの受け取り時には税金がかかりますか？","acceptedAnswer":{"@type":"Answer","text":"かかります。一時金で受け取ると退職所得として退職所得控除（加入年数20年以下は年40万円、20年超は800万円＋年70万円）が使え、控除を超えた部分の2分の1に課税されます。年金で受け取ると公的年金等控除の対象で雑所得になります。会社の退職金と近い時期に受け取ると控除の重複調整が入り、2026年1月以降は、iDeCoの一時金を先に受け取る場合の調整期間が前年以前9年内に延長されました。受け取り方の設計は税理士や金融機関にご相談ください。"}},{"@type":"Question","name":"iDeCoは何歳まで加入できますか？","acceptedAnswer":{"@type":"Answer","text":"2026年12月からは、60歳以上70歳未満で国民年金に加入していない人も、iDeCoの加入者・運用指図者である人や企業年金の資産を移す人など一定の要件を満たせば「第5号加入者」として加入・拠出を続けられるようになりました（上限は6.2万円−企業年金等の掛金相当額）。ただし老齢基礎年金を繰上げ受給した人や、iDeCoの老齢給付金を受け取った人は加入できません。会社員は65歳まで厚生年金の被保険者として拠出できます。"}},{"@type":"Question","name":"新NISAとiDeCo、どちらを優先すべきですか？","acceptedAnswer":{"@type":"Answer","text":"一概には言えません。iDeCoは掛金が所得控除になる点で有利ですが、60歳まで引き出せず、受取時に課税されることがあり、手数料もかかります。新NISAは所得控除はないものの、いつでも売却でき、運用益も受け取りも非課税です。教育費や住宅資金など60歳前に使う予定のお金はNISA、老後資金として確実に取っておくお金はiDeCo、と目的で分けて考える人が多いようです。本サイトは特定の金融商品や金融機関を推奨しません。"}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"かんたんお金計算","item":"https://sengoku-dev.github.io/calc-hub/"},{"@type":"ListItem","position":2,"name":"iDeCo 節税シミュレーター（2026年12月改正対応）｜掛金上限6.2万円・所得税と住民税の軽減額・受取時の税","item":"https://sengoku-dev.github.io/calc-hub/ideco/"}]}</script>
+
+</head>
+<body>
+<header class="site-header"><div class="wrap"><a class="brand" href="/calc-hub/">かんたんお金計算</a><nav class="nav"><a href="/calc-hub/tedori/">手取り計算</a><a href="/calc-hub/jutaku-loan/">住宅ローン</a><a href="/calc-hub/furusato/">ふるさと納税</a><a href="/calc-hub/tsumitate/">積立シミュ</a><a href="/calc-hub/taishokukin/">退職金</a><a href="/calc-hub/shitsugyo-hoken/">失業保険</a><a href="/calc-hub/zangyo/">残業代</a><a href="/calc-hub/juminzei/">住民税</a><a href="/calc-hub/nenshu-no-kabe/">年収の壁</a><a href="/calc-hub/ideco/">iDeCo</a></nav></div></header>
+<div class="ad-slot ad-top" data-ad="728x90" data-ad-mobile="320x50"></div>
+<main class="wrap">
+<p class="pr-label">当サイトはアフィリエイト広告（A8.net・楽天アフィリエイト）を利用しています。</p>
+
+<h1>iDeCo 節税シミュレーター（2026年12月改正対応）</h1>
+<p class="lead">年収・働き方・掛金を入れると、iDeCo（個人型確定拠出年金）で<strong>所得税と住民税がいくら軽くなるか</strong>を概算します。2026年12月分からの<strong>新しい掛金上限（会社員6.2万円・自営業7.5万円）</strong>に対応し、運用後の資産額、一時金で受け取るときの退職所得課税、手数料まで差し引いた効果の目安も表示します。</p>
+
+<div class="tool card" data-tool="ideco">
+<form>
+<div class="grid">
+<div class="field"><label for="i-kind">働き方（加入区分）</label><select id="i-kind" name="kind"><option value="nashi" selected>会社員（企業年金なし）</option><option value="corp">会社員（企業型DC・DBなどあり）</option><option value="koumuin">公務員</option><option value="jiei">自営業・フリーランス（第1号）</option><option value="shufu">専業主婦・主夫（第3号）</option></select><span class="hint">掛金の上限が変わります</span></div>
+<div class="field" data-show="corp" hidden><label for="i-corp">企業年金等の掛金相当額（月額）</label><div class="unit"><input id="i-corp" name="corp" type="number" inputmode="numeric" min="0" step="1000" value="20000"><span>円</span></div><span class="hint">企業型DCの事業主掛金＋DB等の他制度掛金相当額。勤務先の案内で確認</span></div>
+<div class="field"><label for="i-income">年収（自営業は所得）</label><div class="unit"><input id="i-income" name="income" type="number" inputmode="decimal" min="0" step="10" value="500"><span>万円</span></div><span class="hint">会社員・公務員は給与の額面。自営業は売上−経費−青色申告特別控除</span></div>
+<div class="field" data-show="jiei" hidden><label for="i-shaho">社会保険料（年額・自営業）</label><div class="unit"><input id="i-shaho" name="shaho" type="number" inputmode="decimal" min="0" step="1" placeholder="空欄なら国民年金のみ"><span>万円</span></div><span class="hint">国民年金＋国民健康保険料。空欄は国民年金 月17,920円×12</span></div>
+<div class="field"><label for="i-age">現在の年齢</label><div class="unit"><input id="i-age" name="age" type="number" inputmode="numeric" min="18" max="69" value="35"><span>歳</span></div></div>
+<div class="field"><label for="i-dependents">扶養している家族の人数</label><div class="unit"><input id="i-dependents" name="dependents" type="number" inputmode="numeric" min="0" max="10" value="0"><span>人</span></div><span class="hint">配偶者控除・扶養控除の対象（16歳未満は除く）</span></div>
+<div class="field"><label for="i-monthly">毎月の掛金</label><div class="unit"><input id="i-monthly" name="monthly" type="number" inputmode="numeric" min="5000" step="1000" value="23000"><span>円</span></div><span class="hint">5,000円以上・1,000円単位。上限を超えると上限で計算</span></div>
+<div class="field"><label for="i-years">拠出する年数</label><div class="unit"><input id="i-years" name="years" type="number" inputmode="numeric" min="1" max="50" value="25"><span>年</span></div><span class="hint">35歳から60歳までなら25年</span></div>
+<div class="field"><label for="i-rate">想定利回り（年率）</label><div class="unit"><input id="i-rate" name="rate" type="number" inputmode="decimal" min="-10" max="15" step="0.1" value="3"><span>%</span></div><span class="hint">元本確保型（定期預金など）なら0〜0.5%程度</span></div>
+</div>
+<div class="actions"><button type="submit" class="btn btn-calc">節税額を計算する</button></div>
+</form>
+<div class="result is-empty" aria-live="polite"><div class="big">掛金を入力すると節税額が表示されます</div><p class="note">JavaScriptが無効の場合は、下の上限一覧と早見表をご覧ください。</p></div>
+<div class="chart" data-chart></div>
+<p class="note">前提: 所得税は令和8年分、住民税は所得割10%の税率で、毎年同じ収入・同じ掛金が続くと仮定。会社員・公務員の社会保険料は協会けんぽ東京の令和8年度料率による目安。ほかの所得控除（生命保険料・医療費・住宅ローン控除など）は考慮していません。</p>
+</div>
+
+<div class="cta">
+<strong>iDeCoとあわせて確認</strong>
+<ul>
+<li>節税前後の手取りを内訳で見る → <a href="/calc-hub/tedori/">年収から手取り計算</a></li>
+<li>住民税がいくら減るかを詳しく → <a href="/calc-hub/juminzei/">住民税シミュレーター</a>（その他の所得控除に年間掛金を入力）</li>
+<li>iDeCoで所得が減るとふるさと納税の上限も下がります → <a href="/calc-hub/furusato/">ふるさと納税 控除上限額シミュレーター</a></li>
+<li>NISAで同じ額を積み立てたら → <a href="/calc-hub/tsumitate/">積立シミュレーター</a>（取り崩し年数も）</li>
+<li>会社の退職金とあわせた受取時の税 → <a href="/calc-hub/taishokukin/">退職金の手取り計算</a></li>
+<li>パートの妻・夫が掛金を出すなら → <a href="/calc-hub/nenshu-no-kabe/">年収の壁 判定ツール</a>（所得税・住民税がかかる年収かを確認）</li>
+<li>住宅ローンの繰上返済と比べる → <a href="/calc-hub/jutaku-loan/">住宅ローン返済シミュレーター</a>／離職時の備え → <a href="/calc-hub/shitsugyo-hoken/">失業保険の受給額シミュレーター</a>／<a href="/calc-hub/zangyo/">残業代計算</a></li>
+</ul>
+</div>
+
+<h2>iDeCoの掛金上限 改正前と改正後（月額）</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>加入区分</th><th class="num">2026年11月分まで</th><th class="num">2026年12月分から</th><th>備考</th></tr></thead>
+<tbody>
+<tr><td>会社員（企業年金なし）</td><td class="num">23,000円</td><td class="num">62,000円</td><td>2.3万円から大幅に引上げ</td></tr>
+<tr><td>会社員（企業型DC・DBなどあり）</td><td class="num">20,000円</td><td class="num">42,000円</td><td>6.2万円−企業年金等の掛金相当額（例: 月2万円）</td></tr>
+<tr><td>公務員</td><td class="num">20,000円</td><td class="num">54,000円</td><td>6.2万円−共済掛金相当額8,000円</td></tr>
+<tr><td>自営業・フリーランス（第1号）</td><td class="num">68,000円</td><td class="num">75,000円</td><td>国民年金基金・付加保険料と合算</td></tr>
+<tr><td>専業主婦・主夫（第3号）</td><td class="num">23,000円</td><td class="num">23,000円</td><td>据え置き</td></tr>
+</tbody></table></div>
+<p class="note">新しい上限は2026年12月分の掛金（2027年1月26日引落し分）から。改正前の企業年金ありの上限は「5.5万円−掛金相当額」と2万円の小さいほう。60歳以上70歳未満の第5号加入者は6.2万円−企業年金等の掛金相当額。</p>
+
+<h2>年収別 iDeCoの年間節税額 早見表</h2>
+<p class="note" data-quick-caption>条件: 会社員（企業年金なし）・30歳・扶養0人。金額は年間の節税額（所得税＋住民税、円）。JSが有効なら上の入力に連動して再計算します。</p>
+<div class="table-wrap"><table>
+<thead><tr data-quick-head><th>年収</th><th class="num">月10,000円</th><th class="num">月23,000円</th><th class="num">月62,000円</th></tr></thead>
+<tbody data-quick>
+<tr><td class="num">300万円</td><td class="num">18,100</td><td class="num">41,700</td><td class="num">101,000</td></tr>
+<tr><td class="num">400万円</td><td class="num">18,100</td><td class="num">41,700</td><td class="num">112,400</td></tr>
+<tr><td class="num">500万円</td><td class="num">18,100</td><td class="num">41,700</td><td class="num">112,300</td></tr>
+<tr><td class="num">600万円</td><td class="num">24,200</td><td class="num">55,800</td><td class="num">137,300</td></tr>
+<tr><td class="num">700万円</td><td class="num">36,500</td><td class="num">75,100</td><td class="num">169,700</td></tr>
+<tr><td class="num">800万円</td><td class="num">36,500</td><td class="num">84,000</td><td class="num">226,300</td></tr>
+<tr><td class="num">1,000万円</td><td class="num">36,500</td><td class="num">84,000</td><td class="num">226,400</td></tr>
+</tbody></table></div>
+<p class="note">年収300万円で月6.2万円を拠出すると、課税所得がゼロに近づくため節税額は頭打ちになります。所得税率が上がる年収（課税所得195万円・330万円・695万円の境目）を超えると、同じ掛金でも節税額が増えます。</p>
+
+<h2>2026年12月の改正で何が変わるか</h2>
+<p>今回の改正の柱は、会社員の掛金上限が<strong>月2.3万円から6.2万円へ約2.7倍</strong>に広がることです。これまで企業年金のない会社員は年27.6万円までしか拠出できませんでしたが、12月分からは年74.4万円まで拠出できます。企業型DCやDBがある会社員は、これまで「5.5万円−企業年金等の掛金相当額、ただし上限2万円」でしたが、2万円の上限がなくなり、「6.2万円−掛金相当額」をすべてiDeCoに回せるようになります。公務員も共済掛金相当額8,000円を差し引いた5.4万円まで増えます。</p>
+<p>自営業・フリーランスなど第1号被保険者は、国民年金基金・付加保険料との合計で6.8万円から7.5万円へ。専業主婦・主夫など第3号被保険者は2.3万円のまま据え置かれました。</p>
+<p>注意したいのは、<strong>上限が上がっても掛金は自動では増えない</strong>ことです。上限まで拠出したい場合は、加入している金融機関で掛金額の変更手続きが必要です。また、国民年金基金連合会の手数料が2026年12月分から月105円→120円に改定され、金融機関の手数料が無料でも毎月186円以上がかかります。掛金が少額のときほど、手数料の割合が大きくなります。</p>
+
+<h2>節税効果は「所得税率＋10%」で決まる</h2>
+<p>iDeCoの掛金は全額が所得控除になるため、軽くなる税金はおおむね「年間の掛金 ×（所得税率×1.021＋住民税10%）」です。所得税率5%の人なら掛金の約15%、10%なら約20%、20%なら約30%、23%なら約33%が戻ってくる計算です。年収500万円・扶養なしの会社員（税率5%）が月2.3万円を拠出すると年約4.2万円、25年続ければ100万円を超えます。同じ人が上限の月6.2万円まで増やすと、年約11.2万円になります。</p>
+<p>一方で、所得税も住民税もかかっていない人には節税メリットがありません。課税所得がゼロに近づくと、それ以上掛金を増やしても税金は減らないため、上の早見表のように年収300万円台では節税額が頭打ちになります。</p>
+
+<h2>受取時の税と手数料も含めて考える</h2>
+<p>iDeCoは「拠出時に非課税・運用中も非課税・受取時に課税」の制度です。一時金で受け取れば退職所得控除が使え、加入25年なら1,150万円まで非課税ですが、会社の退職金と同じ年や近い年に受け取ると、控除の計算で勤続年数の重複が調整されます。本ツールの「受取時の税」は、iDeCoだけを一時金で受け取った場合の目安です。年金形式で受け取ると公的年金等控除の対象になり、他の年金収入と合算されます。</p>
+<p>差し引きの効果は「節税額の合計＋運用益が非課税になる効果−受取時の税−手数料」で概算しています。運用益の非課税効果は、同じ運用を課税口座でした場合に20.315%の税がかかると仮定した比較値です。新NISAでも運用益は非課税になるため、NISAと比べたiDeCo独自の上乗せは主に「拠出時の節税」と考えるのが目安になります。</p>
+
+<h2>計算方法と根拠（検証日: 2026年10月26日）</h2>
+<ol>
+<li>掛金の上限: 2026年12月分〜は、企業年金なしの会社員6.2万円、企業年金等ありの会社員は6.2万円−企業年金等の掛金相当額、公務員は6.2万円−8,000円、第1号7.5万円、第3号2.3万円（1,000円未満切捨て、5,000円未満なら拠出不可）。</li>
+<li>合計所得: 会社員・公務員・第3号は 年収−給与所得控除（令和8年分、最低74万円）。自営業は入力した所得。</li>
+<li>所得税 ＝（合計所得−社会保険料−基礎控除−扶養控除38万円×人数−年間掛金）×税率×1.021、100円未満切捨て。住民税所得割 ＝（合計所得−社会保険料−43万円−33万円×人数−年間掛金）×10%−調整控除。所得割の非課税限度額（単身45万円、扶養ありは35万円×(人数＋1)＋42万円）以下は0。</li>
+<li>運用: 毎月の掛金を年利÷12の月次複利で積み立て（<a href="/calc-hub/tsumitate/">積立シミュレーター</a>と同じ計算）。受取時の税は、加入年数を勤続年数とみなして<a href="/calc-hub/taishokukin/">退職金の手取り計算</a>と同じ方法で算出。</li>
+<li>手数料: 加入時2,829円、口座管理手数料 月186円（国民年金基金連合会120円＋事務委託先金融機関66円。運営管理機関の手数料0円の場合）。</li>
+</ol>
+<ul class="sources">
+<li><a href="https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/nenkin/nenkin/kyoshutsu/index.html" target="_blank" rel="noopener">厚生労働省 確定拠出年金制度</a> ／ <a href="https://www.mhlw.go.jp/content/12500000/001726959.pdf" target="_blank" rel="noopener">iDeCoの拠出限度額の引上げ等（リーフレット）</a>（2026年12月1日施行、加入可能年齢の拡大）</li>
+<li><a href="https://www.ideco-koushiki.jp/" target="_blank" rel="noopener">iDeCo公式サイト（国民年金基金連合会）</a>（掛金の上限・手数料の改定）</li>
+<li><a href="https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/1135.htm" target="_blank" rel="noopener">国税庁 タックスアンサー No.1135 小規模企業共済等掛金控除</a></li>
+<li><a href="https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/1420.htm" target="_blank" rel="noopener">国税庁 タックスアンサー No.1420 退職金を受け取ったとき（退職所得）</a></li>
+<li><a href="https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/2260.htm" target="_blank" rel="noopener">国税庁 タックスアンサー No.2260 所得税の税率</a></li>
+</ul>
+<p class="note">本ツールの結果は一定の条件に基づく概算・目安であり、節税額や運用成果を保証するものではありません。投資には元本割れのリスクがあり、iDeCoは原則60歳まで引き出せません。本サイトは特定の金融商品・金融機関への加入を推奨するものではありません。掛金上限は勤務先の企業年金の内容によって異なるため、勤務先や加入先の金融機関でご確認ください。個別の税務相談は税理士へどうぞ。</p>
+<section class="faq" id="faq"><h2>よくある質問</h2><details><summary>iDeCoの掛金上限は2026年12月からいくらになりますか？</summary><p>2026年12月1日施行の改正で、12月分の掛金（2027年1月26日引落し分）から上限が引き上げられます。企業年金のない会社員は月2.3万円から6.2万円へ、企業型DCや確定給付企業年金（DB）がある会社員と公務員は「6.2万円−企業年金等の掛金相当額」（公務員は共済掛金相当額8,000円を差し引いて5.4万円）へ、自営業・フリーランスなど第1号被保険者は国民年金基金・付加保険料との合計で6.8万円から7.5万円へ上がります。専業主婦・主夫など第3号被保険者は2.3万円のまま据え置きです。上限まで増やすには、自分で掛金額の変更手続きをする必要があります。</p></details><details><summary>iDeCoで節税できる金額はどう計算しますか？</summary><p>掛金の全額が「小規模企業共済等掛金控除」として所得から差し引かれるため、節税額は概ね「年間の掛金 ×（所得税率×1.021＋住民税10%）」です。所得税率5%の人が月2.3万円（年27.6万円）を拠出すると、所得税約1.4万円＋住民税2.76万円で年約4.2万円、税率20%の人なら年約8.4万円が軽くなります。会社員は年末調整、自営業は確定申告で控除を受けます。所得税・住民税がかかっていない人は、掛金を出しても節税効果はありません。</p></details><details><summary>専業主婦（主夫）や年収が低い人もiDeCoに入るべきですか？</summary><p>専業主婦・主夫や、所得税・住民税がかからない収入の人は、掛金による節税効果がありません。運用益が非課税になるメリットは残りますが、口座管理手数料（2026年12月分から月186円以上）がかかり、60歳まで引き出せないため、新NISAと比べて有利とは限りません。本サイトは加入を勧めるものではなく、制度の違いを理解したうえでご自身で判断してください。</p></details><details><summary>iDeCoの受け取り時には税金がかかりますか？</summary><p>かかります。一時金で受け取ると退職所得として退職所得控除（加入年数20年以下は年40万円、20年超は800万円＋年70万円）が使え、控除を超えた部分の2分の1に課税されます。年金で受け取ると公的年金等控除の対象で雑所得になります。会社の退職金と近い時期に受け取ると控除の重複調整が入り、2026年1月以降は、iDeCoの一時金を先に受け取る場合の調整期間が前年以前9年内に延長されました。受け取り方の設計は税理士や金融機関にご相談ください。</p></details><details><summary>iDeCoは何歳まで加入できますか？</summary><p>2026年12月からは、60歳以上70歳未満で国民年金に加入していない人も、iDeCoの加入者・運用指図者である人や企業年金の資産を移す人など一定の要件を満たせば「第5号加入者」として加入・拠出を続けられるようになりました（上限は6.2万円−企業年金等の掛金相当額）。ただし老齢基礎年金を繰上げ受給した人や、iDeCoの老齢給付金を受け取った人は加入できません。会社員は65歳まで厚生年金の被保険者として拠出できます。</p></details><details><summary>新NISAとiDeCo、どちらを優先すべきですか？</summary><p>一概には言えません。iDeCoは掛金が所得控除になる点で有利ですが、60歳まで引き出せず、受取時に課税されることがあり、手数料もかかります。新NISAは所得控除はないものの、いつでも売却でき、運用益も受け取りも非課税です。教育費や住宅資金など60歳前に使う予定のお金はNISA、老後資金として確実に取っておくお金はiDeCo、と目的で分けて考える人が多いようです。本サイトは特定の金融商品や金融機関を推奨しません。</p></details></section>
+</main>
+<div class="ad-slot ad-bottom" data-ad="300x250" data-ad-mobile="300x250"></div>
+<footer class="site-footer"><div class="wrap">
+<p class="disclaimer">本サイトの計算結果は概算であり、正確性を保証するものではありません。実際の金額は各機関・制度の最新情報をご確認ください。本サイトはアフィリエイト広告（A8.net・楽天アフィリエイト等）を利用しています。</p>
+<p><a href="/calc-hub/about/">このサイトについて</a> · <a href="/calc-hub/privacy/">プライバシーポリシー</a> · 最終更新: 2026-10-26</p>
+<p>© 2026 かんたんお金計算</p>
+</div></footer>
+<script>window.ADS_ENABLED = false;</script>
+<script src="/calc-hub/assets/ads.js" defer></script>
+<script src="/calc-hub/assets/app.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://sengoku-dev.github.io/calc-hub/sitemap.xml

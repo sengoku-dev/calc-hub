@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>住宅ローン返済シミュレーター | かんたんお金計算</title>
+<meta name="description" content="借入額・金利・返済期間から毎月の返済額、総返済額、総利息を即計算。元利均等・元金均等、ボーナス返済、繰上返済（期間短縮型）の効果まで。年別の残高表と残高推移グラフつき。">
+<link rel="canonical" href="https://sengoku-dev.github.io/calc-hub/jutaku-loan/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="住宅ローン返済シミュレーター | かんたんお金計算">
+<meta property="og:description" content="借入額・金利・返済期間から毎月の返済額、総返済額、総利息を即計算。元利均等・元金均等、ボーナス返済、繰上返済（期間短縮型）の効果まで。年別の残高表と残高推移グラフつき。">
+<meta property="og:url" content="https://sengoku-dev.github.io/calc-hub/jutaku-loan/">
+<meta property="og:site_name" content="かんたんお金計算">
+<meta property="og:locale" content="ja_JP">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="/calc-hub/assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/calc-hub/assets/style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"住宅ローン返済シミュレーター","url":"https://sengoku-dev.github.io/calc-hub/jutaku-loan/","applicationCategory":"UtilitiesApplication","operatingSystem":"Web","description":"借入額・金利・返済期間から毎月の返済額、総返済額、総利息を即計算。元利均等・元金均等、ボーナス返済、繰上返済（期間短縮型）の効果まで。年別の残高表と残高推移グラフつき。","offers":{"@type":"Offer","price":"0","priceCurrency":"JPY"},"inLanguage":"ja"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"元利均等と元金均等はどちらが得ですか？","acceptedAnswer":{"@type":"Answer","text":"総利息は元金均等のほうが少なくなります。元金均等は最初から元金を一定額ずつ返すので残高の減りが早いためです。ただし初回の返済額が元利均等より1〜2割多く、金融機関によっては取り扱いがなかったり審査上の返済負担率が厳しくなったりします。毎月の返済を一定にして家計を安定させたいなら元利均等、総額を抑えたいなら元金均等、という選び方が一般的です。"}},{"@type":"Question","name":"返済額は手取りの何割までが目安ですか？","acceptedAnswer":{"@type":"Answer","text":"一般に「返済負担率は額面年収の20〜25%以内」が安全圏とされます。年収500万円なら年100〜125万円、月8〜10万円程度です。金融機関の審査上限は30〜35%ですが、そこまで借りると教育費や老後資金の積立が難しくなります。手取りベースで考えたい方は、先に手取り計算ツールで年間の手取りを出してから当てはめると実感しやすいです。"}},{"@type":"Question","name":"繰上返済の「期間短縮型」と「返済額軽減型」はどう違いますか？","acceptedAnswer":{"@type":"Answer","text":"期間短縮型は毎月の返済額を変えずに完済時期を早める方法で、利息の軽減効果が大きいのが特徴です。返済額軽減型は期間を変えずに毎月の返済額を減らす方法で、利息の軽減効果は小さいものの家計のゆとりが増えます。本ツールは期間短縮型で試算しています。"}},{"@type":"Question","name":"繰上返済と投資、どちらを優先すべきですか？","acceptedAnswer":{"@type":"Answer","text":"住宅ローンの金利が1%前後で、住宅ローン控除（年末残高の0.7%）を受けている期間は、繰上返済の実質的な「利回り」はごくわずかです。一方、手元資金を減らすと病気や失業時のリスクに弱くなります。生活防衛資金（生活費の半年〜1年分）を確保したうえで、控除期間が終わってから繰上返済を検討する、という順序が一般的な考え方です。投資の利回りは保証されるものではないため、どちらが得かは断定できません。"}},{"@type":"Question","name":"ボーナス返済は使ったほうがいいですか？","acceptedAnswer":{"@type":"Answer","text":"ボーナス返済を使うと毎月の返済額は減りますが、総利息はわずかに増えます（半年に1回しか元金が減らないため）。賞与は業績で変動するので、ボーナス返済に頼る割合は借入額の2割以内、できれば使わない設計が無難です。本ツールでは「ボーナス返済に充てる借入額」を入力すると、月払い分とボーナス払い分を分けて計算します。"}},{"@type":"Question","name":"変動金利の場合、将来の返済額はどうなりますか？","acceptedAnswer":{"@type":"Answer","text":"変動金利には一般に「5年ルール（返済額は5年間据え置き）」と「125%ルール（見直し後の返済額は直前の1.25倍まで）」があり、金利が上がっても返済額の急増は抑えられますが、未払い利息が発生して元金の減りが遅くなります。本ツールは期間中の金利が一定の前提です。金利上昇に備えるには、金利を1〜2%上げたケースも試算して返済額の差を確認しておくと安心です。"}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"かんたんお金計算","item":"https://sengoku-dev.github.io/calc-hub/"},{"@type":"ListItem","position":2,"name":"住宅ローン返済シミュレーター","item":"https://sengoku-dev.github.io/calc-hub/jutaku-loan/"}]}</script>
+
+</head>
+<body>
+<header class="site-header"><div class="wrap"><a class="brand" href="/calc-hub/">かんたんお金計算</a><nav class="nav"><a href="/calc-hub/tedori/">手取り計算</a><a href="/calc-hub/jutaku-loan/">住宅ローン</a><a href="/calc-hub/furusato/">ふるさと納税</a><a href="/calc-hub/tsumitate/">積立シミュ</a><a href="/calc-hub/taishokukin/">退職金</a><a href="/calc-hub/shitsugyo-hoken/">失業保険</a><a href="/calc-hub/zangyo/">残業代</a><a href="/calc-hub/juminzei/">住民税</a><a href="/calc-hub/nenshu-no-kabe/">年収の壁</a><a href="/calc-hub/ideco/">iDeCo</a></nav></div></header>
+<div class="ad-slot ad-top" data-ad="728x90" data-ad-mobile="320x50"></div>
+<main class="wrap">
+<p class="pr-label">当サイトはアフィリエイト広告（A8.net・楽天アフィリエイト）を利用しています。</p>
+
+<h1>住宅ローン返済シミュレーター</h1>
+<p class="lead">借入額・金利・返済期間を入れると、<strong>毎月の返済額・総返済額・総利息</strong>をその場で計算します。元利均等／元金均等の切り替え、ボーナス返済、繰上返済（期間短縮型）の効果、年別の残高表と残高推移グラフに対応しています。</p>
+
+<div class="tool card" data-tool="loan">
+<form>
+<div class="grid">
+<div class="field"><label for="l-principal">借入額</label><div class="unit"><input id="l-principal" name="principal" type="number" inputmode="numeric" min="0" step="100" value="3000"><span>万円</span></div></div>
+<div class="field"><label for="l-rate">金利（年）</label><div class="unit"><input id="l-rate" name="rate" type="number" inputmode="decimal" min="0" max="20" step="0.01" value="1.0"><span>%</span></div><span class="hint">期間中は一定と仮定</span></div>
+<div class="field"><label for="l-years">返済期間</label><div class="unit"><input id="l-years" name="years" type="number" inputmode="numeric" min="1" max="50" value="35"><span>年</span></div></div>
+</div>
+<fieldset class="field"><legend class="field"><strong>返済方式</strong></legend>
+<div class="radio-row"><label><input type="radio" name="type" value="ganri" checked>元利均等（毎月同額）</label><label><input type="radio" name="type" value="gankin">元金均等（元金が毎月同額）</label></div></fieldset>
+<div class="grid">
+<div class="field"><label for="l-bonus">ボーナス返済に充てる借入額（任意）</label><div class="unit"><input id="l-bonus" name="bonus" type="number" inputmode="numeric" min="0" step="50" value="0"><span>万円</span></div><span class="hint">借入額のうち年2回払いで返す部分</span></div>
+<div class="field"><label for="l-prepay">繰上返済額（任意）</label><div class="unit"><input id="l-prepay" name="prepay" type="number" inputmode="numeric" min="0" step="10" value="0"><span>万円</span></div></div>
+<div class="field"><label for="l-prepay-year">繰上返済する時期</label><div class="unit"><input id="l-prepay-year" name="prepayYear" type="number" inputmode="numeric" min="1" max="50" value="5"><span>年目の末</span></div></div>
+</div>
+<div class="actions"><button type="submit" class="btn btn-calc">返済額を計算する</button></div>
+</form>
+<div class="result is-empty" aria-live="polite"><div class="big">借入額を入力すると返済額が表示されます</div><p class="note">JavaScriptが無効の場合は、下の早見表をご覧ください。</p></div>
+<div data-prepay></div>
+<div class="chart" data-chart></div>
+</div>
+
+<div class="cta">
+<strong>あわせて確認</strong>
+<ul>
+<li>返済に回せる額は手取りから → <a href="/calc-hub/tedori/">年収から手取り計算</a></li>
+<li>繰上返済せずに積み立てたらいくらに？ → <a href="/calc-hub/tsumitate/">積立シミュレーター</a></li>
+<li>退職金で残債を返す予定なら → <a href="/calc-hub/taishokukin/">退職金の手取り計算</a></li>
+<li>万一の離職時に返済を続けられるか → <a href="/calc-hub/shitsugyo-hoken/">失業保険の受給額シミュレーター</a></li>
+<li>残業代に頼らず返せる額か確認 → <a href="/calc-hub/zangyo/">残業代計算・固定残業代チェッカー</a></li>
+<li>住宅ローン控除を引ききれない分は住民税から → <a href="/calc-hub/juminzei/">住民税シミュレーター</a></li>
+<li>共働き・パート収入を返済計画に入れるなら → <a href="/calc-hub/nenshu-no-kabe/">年収の壁 判定ツール</a></li>
+<li>繰上返済とiDeCoの節税効果を比べる → <a href="/calc-hub/ideco/">iDeCo 節税シミュレーター</a></li>
+</ul>
+</div>
+
+<h2>年別 返済額・残高表</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>年</th><th class="num">年間返済額</th><th class="num">うち利息</th><th class="num">うち元金</th><th class="num">年末残高</th></tr></thead>
+<tbody data-yearly><tr><td colspan="5" class="note">条件を入力すると年別の表が表示されます。</td></tr></tbody>
+</table></div>
+
+<h2>借入額・金利別 毎月返済額の早見表（元利均等）</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>借入額</th><th class="num">金利</th><th class="num">期間</th><th class="num">毎月返済額</th><th class="num">総返済額</th><th class="num">総利息</th></tr></thead>
+<tbody>
+<tr><td class="num">3,000万円</td><td class="num">0.5%</td><td class="num">35年</td><td class="num">77,876</td><td class="num">32,707,757</td><td class="num">2,707,757</td></tr>
+<tr><td class="num">3,000万円</td><td class="num">1.0%</td><td class="num">35年</td><td class="num">84,686</td><td class="num">35,567,998</td><td class="num">5,567,998</td></tr>
+<tr><td class="num">3,000万円</td><td class="num">1.5%</td><td class="num">35年</td><td class="num">91,855</td><td class="num">38,579,239</td><td class="num">8,579,239</td></tr>
+<tr><td class="num">4,000万円</td><td class="num">0.5%</td><td class="num">35年</td><td class="num">103,834</td><td class="num">43,610,343</td><td class="num">3,610,343</td></tr>
+<tr><td class="num">4,000万円</td><td class="num">1.0%</td><td class="num">35年</td><td class="num">112,914</td><td class="num">47,423,997</td><td class="num">7,423,997</td></tr>
+<tr><td class="num">5,000万円</td><td class="num">1.0%</td><td class="num">35年</td><td class="num">141,143</td><td class="num">59,279,997</td><td class="num">9,279,997</td></tr>
+<tr><td class="num">3,000万円</td><td class="num">1.0%</td><td class="num">25年</td><td class="num">113,062</td><td class="num">33,918,521</td><td class="num">3,918,521</td></tr>
+</tbody></table></div>
+<p class="note">金額は円。ボーナス返済なし。金利が0.5%違うだけで3,000万円・35年なら総利息が約290万円変わります。</p>
+
+<h2>毎月の返済額はこう決まる</h2>
+<p>住宅ローンの返済額を決めるのは「借入額・金利・期間・返済方式」の4つだけです。金利は借入時点で選ぶ変動／固定の種類で決まり、期間は長いほど毎月の負担は軽くなりますが、利息の総額は増えます。たとえば3,000万円を金利1%で借りると、35年返済では毎月84,686円・総利息557万円、25年返済では毎月113,062円・総利息392万円。期間を10年縮めると毎月2.8万円増える代わりに、利息は165万円減ります。</p>
+<h3>元利均等返済</h3>
+<p>毎月の返済額（元金＋利息）が完済まで一定になる方式です。返済初期は利息の割合が大きく、元金はなかなか減りません。家計の見通しが立てやすいため、日本の住宅ローンの大半がこの方式です。毎月返済額は次の式で求まります（r＝月利、n＝返済回数）。</p>
+<p><code>毎月返済額 ＝ 借入額 × r ÷ (1 − (1 + r)<sup>−n</sup>)</code></p>
+<h3>元金均等返済</h3>
+<p>元金を返済回数で均等に割り、そこに残高に応じた利息を上乗せする方式です。返済額は初回が最も多く、だんだん減っていきます。同じ条件なら総利息は元利均等より少なくなります。</p>
+
+<h2>繰上返済の効果と、投資との比較の考え方</h2>
+<p>繰上返済したお金は全額が元金に充てられるため、その元金にかかるはずだった将来の利息がまるごと消えます。効果は「残り期間が長いほど」「金利が高いほど」大きく、たとえば3,000万円・金利1%・35年のローンで5年目に100万円を繰上返済すると、期間が1年3か月短縮され、利息が約34万円減ります（上の試算欄で確認できます）。</p>
+<p>ただし、2026年10月時点の新規の変動金利は低いところで1.0%前後、メガバンクで1.2%前後です（日銀の利上げを受けて2026年に上昇。検証日: 2026年10月12日）。2025年以前に0.3〜0.6%台で借りた人の多くは、今もこれより低い金利で返済しています。住宅ローン控除を受けている期間（最長13年）は年末残高の0.7%が税額控除されるので、金利が0.7%を下回る人は<strong>繰上返済すると控除の恩恵が減って差し引きで損になる</strong>ことさえあります。繰上返済を急ぐより、次の順番で考えるのが現実的です。</p>
+<ol>
+<li>生活防衛資金（生活費の半年〜1年分）を現預金で確保する。</li>
+<li>住宅ローン控除の期間中は、控除をフルに受けつつ余剰資金を貯める／積み立てる。</li>
+<li>控除が終わったら、金利と手元資金のバランスを見て繰上返済を検討する。金利が上がってきたときは繰上返済の優先度が上がる。</li>
+</ol>
+<p>「繰上返済の利回りはローン金利と同じで、しかも確実」という見方もあり、元本割れの不安を減らしたい人には繰上返済の価値があります。投資の利回りは将来にわたって保証されるものではないため、どちらが得かはご自身のリスク許容度で判断してください。</p>
+
+<h2>借入可能額より「返せる額」で考える</h2>
+<p>金融機関の審査では「返済負担率（年収に占める年間返済額の割合）35%以内」のような基準が使われ、年収500万円なら5,000万円近く借りられることもあります。しかし手取りは年収の75〜80%程度しかなく（<a href="/calc-hub/tedori/">手取り計算</a>）、固定資産税・修繕費・保険料も毎年かかります。目安としては返済負担率20〜25%、ボーナス返済なし、定年までに完済できる期間、の3点を満たす借入額が無理のないラインです。</p>
+
+<h2>計算方法と根拠</h2>
+<ul>
+<li>元利均等: 上記の年金現価の式で毎月返済額を求め、毎月「利息＝残高×月利」「元金＝返済額−利息」を計算。</li>
+<li>元金均等: 毎月の元金＝借入額÷回数、利息＝残高×月利。</li>
+<li>ボーナス返済: 入力した借入額をボーナス払い分とし、年2回（半年ごと・半年複利）で同じ方式により返済。月払い分と合算して総返済額・残高を表示。</li>
+<li>繰上返済（期間短縮型）: 指定年の末に繰上返済額を元金から差し引き、毎月返済額は変えずに完済まで計算。短縮期間と利息軽減額は、繰上返済なしの場合との差額。</li>
+<li>金利は期間中一定、諸費用（事務手数料・保証料・団信特約料）、住宅ローン控除、未払い利息は考慮していません。</li>
+</ul>
+<ul class="sources">
+<li><a href="https://www.flat35.com/simulation/simu_01.html" target="_blank" rel="noopener">住宅金融支援機構 返済額シミュレーション</a>（計算方法の確認に使用）</li>
+<li><a href="https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/1211.htm" target="_blank" rel="noopener">国税庁 タックスアンサー No.1211 住宅借入金等特別控除</a></li>
+<li><a href="https://www.jhf.go.jp/loan/yushi/info/kinri.html" target="_blank" rel="noopener">住宅金融支援機構 フラット35 金利情報</a></li>
+</ul>
+<p class="note">本ツールの結果は概算です。実際の返済額は金融機関の条件（端数処理、金利の見直し時期、手数料等）により異なります。借入の判断は金融機関や専門家にご相談のうえ行ってください。</p>
+<section class="faq" id="faq"><h2>よくある質問</h2><details><summary>元利均等と元金均等はどちらが得ですか？</summary><p>総利息は元金均等のほうが少なくなります。元金均等は最初から元金を一定額ずつ返すので残高の減りが早いためです。ただし初回の返済額が元利均等より1〜2割多く、金融機関によっては取り扱いがなかったり審査上の返済負担率が厳しくなったりします。毎月の返済を一定にして家計を安定させたいなら元利均等、総額を抑えたいなら元金均等、という選び方が一般的です。</p></details><details><summary>返済額は手取りの何割までが目安ですか？</summary><p>一般に「返済負担率は額面年収の20〜25%以内」が安全圏とされます。年収500万円なら年100〜125万円、月8〜10万円程度です。金融機関の審査上限は30〜35%ですが、そこまで借りると教育費や老後資金の積立が難しくなります。手取りベースで考えたい方は、先に手取り計算ツールで年間の手取りを出してから当てはめると実感しやすいです。</p></details><details><summary>繰上返済の「期間短縮型」と「返済額軽減型」はどう違いますか？</summary><p>期間短縮型は毎月の返済額を変えずに完済時期を早める方法で、利息の軽減効果が大きいのが特徴です。返済額軽減型は期間を変えずに毎月の返済額を減らす方法で、利息の軽減効果は小さいものの家計のゆとりが増えます。本ツールは期間短縮型で試算しています。</p></details><details><summary>繰上返済と投資、どちらを優先すべきですか？</summary><p>住宅ローンの金利が1%前後で、住宅ローン控除（年末残高の0.7%）を受けている期間は、繰上返済の実質的な「利回り」はごくわずかです。一方、手元資金を減らすと病気や失業時のリスクに弱くなります。生活防衛資金（生活費の半年〜1年分）を確保したうえで、控除期間が終わってから繰上返済を検討する、という順序が一般的な考え方です。投資の利回りは保証されるものではないため、どちらが得かは断定できません。</p></details><details><summary>ボーナス返済は使ったほうがいいですか？</summary><p>ボーナス返済を使うと毎月の返済額は減りますが、総利息はわずかに増えます（半年に1回しか元金が減らないため）。賞与は業績で変動するので、ボーナス返済に頼る割合は借入額の2割以内、できれば使わない設計が無難です。本ツールでは「ボーナス返済に充てる借入額」を入力すると、月払い分とボーナス払い分を分けて計算します。</p></details><details><summary>変動金利の場合、将来の返済額はどうなりますか？</summary><p>変動金利には一般に「5年ルール（返済額は5年間据え置き）」と「125%ルール（見直し後の返済額は直前の1.25倍まで）」があり、金利が上がっても返済額の急増は抑えられますが、未払い利息が発生して元金の減りが遅くなります。本ツールは期間中の金利が一定の前提です。金利上昇に備えるには、金利を1〜2%上げたケースも試算して返済額の差を確認しておくと安心です。</p></details></section>
+</main>
+<div class="ad-slot ad-bottom" data-ad="300x250" data-ad-mobile="300x250"></div>
+<footer class="site-footer"><div class="wrap">
+<p class="disclaimer">本サイトの計算結果は概算であり、正確性を保証するものではありません。実際の金額は各機関・制度の最新情報をご確認ください。本サイトはアフィリエイト広告（A8.net・楽天アフィリエイト等）を利用しています。</p>
+<p><a href="/calc-hub/about/">このサイトについて</a> · <a href="/calc-hub/privacy/">プライバシーポリシー</a> · 最終更新: 2026-10-12</p>
+<p>© 2026 かんたんお金計算</p>
+</div></footer>
+<script>window.ADS_ENABLED = false;</script>
+<script src="/calc-hub/assets/ads.js" defer></script>
+<script src="/calc-hub/assets/app.js" defer></script>
+</body>
+</html>
